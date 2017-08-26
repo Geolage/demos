@@ -1,0 +1,85 @@
+{
+    "userInfo": [{
+            "id": "oooyou",
+            "time": "2017-8-10",
+            "view": 2,
+            "comment": 0,
+            "link":"..\\htmls\\vote_detail.html",
+            "thumbnail": "..\\images\\thumbnail\\user\\oooyou.jpg",
+            "unique": "001",
+            "content": {
+                "title": "选出你心目中的中国风歌曲",
+                "label": ["周杰伦", "经典", "中国风"],
+                "description": "周杰伦（Jay Chou），1979年1月18日出生于台湾省新北市，中国台湾流行乐男歌手、音乐人、演员、导演、编剧、监制、商人。"
+            }
+        },
+        {
+            "id": "ooobug",
+            "time": "2017-8-10",
+            "view": 1,
+            "comment": 0,
+            "link":"..\\htmls\\vote_detail.html",
+            "thumbnail": "..\\images\\thumbnail\\user\\ooobug.jpg",
+            "unique": "002",
+            "content": {
+                "title": "No Title's Here",
+                "label": ["label1", "label2", "label3"],
+                "description": "Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的工具。可以用来模拟服务器响应。优点是非常简单方便，无侵入性，基本覆盖常用的接口数据类型。"
+            }
+        },
+        {
+            "id": "gy18505",
+            "time": "2017-8-11",
+            "view": 0,
+            "comment": 0,
+            "link":"..\\htmls\\vote_detail.html",
+            "thumbnail": "..\\images\\thumbnail\\user\\gy18505.jpg",
+            "unique": "003",
+            "content": {
+                "title": "No Title's Here",
+                "label": ["label1", "label2", "label3"],
+                "description": "HTML DOM 定义了所有 HTML 元素的对象和属性,以及访问它们的方法。换言之，HTML DOM 是关于如何获取、修改、添加或删除 HTML 元素的标准。"
+            }
+        },
+        {
+            "id": "awesome",
+            "time": "2017-8-12",
+            "view": 0,
+            "comment": 0,
+            "link":"..\\htmls\\vote_detail.html",
+            "thumbnail": "..\\images\\thumbnail\\user\\default.jpg",
+            "unique": "004",
+            "content": {
+                "title": "No Title's Here",
+                "label": ["label1", "label2", "label3"],
+                "description": "今天和大家分享一组简单的提示(Tooltip)动画灵感，这种提示通常应用在文字、按钮或链接上，当鼠标经过时，会有一个「聊天气泡」一样界面，进行提示，这些元素在网页设计中是经常用到的。"
+            }
+        },
+        {
+            "id": "believer",
+            "time": "2017-8-13",
+            "view": 1,
+            "comment": 0,
+            "link":"..\\htmls\\vote_detail.html",
+            "thumbnail": "..\\images\\thumbnail\\user\\default.jpg",
+            "unique": "005",
+            "content": {
+                "title": "No Title's Here",
+                "label": ["label1", "label2", "label3"],
+                "description": "今天和大家分享一组简单的提示(Tooltip)动画灵感，这种提示通常应用在文字、按钮或链接上，当鼠标经过时，会有一个「聊天气泡」一样界面，进行提示，这些元素在网页设计中是经常用到的。"
+            }
+        }
+    ],
+
+    "voteInfo": [{
+        "unique": "001",
+        "Type": "text",
+        "Options": [
+            "周杰伦", "林俊杰", "王力宏", "陈奕迅", "蔡依林", "蔡健雅", "张惠妹", "Hebe"],
+        "Attachment": {
+            "desc": "",
+            "pics": ["user\\oooyou\\src\\img\\2017081000101.jpg", "user\\oooyou\\src\\img\\2017081000102.jpg", "", "user\\oooyou\\src\\img\\2017081000103.jpg", "", "", "", "user\\oooyou\\src\\img\\2017081000104.jpg"],
+            "links": []
+        }
+    }]
+}

@@ -1,0 +1,24 @@
+[".detail-header"] 
+{{set value=detail.userInfo}}
+<img class="user-img img-circle img-responsive" src="{{value.thumbnail}}">
+<div class="user-about">
+    <h4 class="user-id">{{value.id}}</h4>
+    <span class="user-time">{{value.time}}</span>
+</div>
+</div>
+<h3 class="user-title">{{value.content.title}}</h3>
+<div class="user-label">
+    {{each value.content.label val}}
+        <span class="label label{{$imports.getStyle("label")}}">{{val}}</span> 
+    {{/each}}
+</div>
+[".user-statement"] 
+{{set value=detail.userInfo.content}}
+<div class="description">
+    <p class="text-justify">“ {{value.description}} ”</p>
+</div>
+<div class="article">
+    {{each $imports.getArticle(value.article) article}}
+    <p class="text-justify">{{article}}</p>
+    {{/each}}
+</div>

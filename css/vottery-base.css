@@ -1,0 +1,104 @@
+body {
+    font-family: "微软雅黑";
+    padding-top: 5rem;
+    background-color: #d7dbdd;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+i{
+    color:darkgray;
+}
+i:hover{
+     color: #c8c9cb !important;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.a_home{
+    color: #fff !important;
+    text-decoration: none !important;
+    position: relative;
+    top:16px;
+    left: 80px;
+    line-height: 24px;
+}
+.a_home:hover{
+    color: #fff;
+    text-decoration: none;
+}
+#navibar {
+    height: 5.6rem;
+    background: #24292e;
+}
+.navbar-nav{
+    padding-top: 5px;
+    float: right;
+    position: relative;
+    right: 22%;
+}
+.navbar-nav li a{
+    background-color: transparent !important;
+    border: none;
+}
+.navbar-nav li a:hover{
+    background-color: inherit;
+    color: #c8c9cb !important;
+}
+a.nav-link i{
+   font-size: 16px;
+}
+#search {
+    width: 320px;
+    height: 32px;
+    font-size: 13px;
+    color: white;
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+}
+.vottery {
+    background-image: url(vottery-white-32.svg);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+#footer{
+    width: 100%;
+    margin-top: 1rem;
+    bottom: 0;
+    right: 0;
+    background-color: #313840;
+}
+.site-footer {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.6rem;
+}
+.site-footer>*{
+    margin-top: 1rem;
+    align-self: center;
+}
+.footer_mark{
+    color: #707a85;
+}
+.site-footer-links:first-child{
+    padding-left:0; 
+}
+.site-footer-links li{
+    float: left;
+    margin: 0 10px;
+}
+.site-footer-links a,.site-footer-links a:visited{
+    color: #818585;
+    text-decoration: none;
+}
+.site-footer-links a:hover{
+    color: #c9c9c9;
+}

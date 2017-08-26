@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vottery - Main</title>
+    <link rel="stylesheet" href="../css/bootstrap-3.3.7.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/vottery-base.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <nav id="navibar" class="navbar navbar-fixed-top navbar-dark bg-inverse">
+        <a class="navbar-brand" href="#" style="width:15%;"></a>
+        <a class="navbar-brand" href="#" style="padding:6px;">
+            <svg class="vottery"></svg>
+        </a>
+        <a class="a_home" href="#" style="font-size:24px;padding:1px;">
+              VOTTERY<span class="sr-only">(current)</span>
+        </a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">
+                    <i class="fa fa-search"></i>
+                </a>
+                <div class="dropdown-menu" style="font-size:14px;">
+                    <center>
+                        <h6 class="dropdown-header">请输入关键词</h6>
+                        <div class="divider"></div>
+                        <div style="height:80px;width:300px;"><br/>
+                            <form action="javascript:;" method="">
+                                <div class="input-group" style="width:270px;">
+                                    <input type="text" class="form-control" placeholder="我正在感兴趣的事" aria-describedby="basic-addon1" style="height:32px;font-size:14px;">
+                                    <span class="input-group-addon" id="basic-addon1" style="font-size:14px;">@Vottery</span>
+                                </div>
+                            </form>
+                        </div>
+                    </center>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">
+                    <i class="fa fa-envira"></i>
+                </a>
+                <div class="dropdown-menu" style="font-size:14px;">
+                    <center>
+                        <h6 class="dropdown-header">加载中...</h6>
+                        <div class="divider"></div>
+                        <div style="height:80px;width:200px;"><br/>
+                            <i class="fa fa-refresh fa-spin fa-lg" style="color:#383838;"></i><br/><br/>
+                        </div>
+                    </center>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">
+                    <i class="fa fa-heartbeat"></i>
+                </a>
+                <div class="dropdown-menu" style="font-size:14px;min-width:100%">
+                    <center>
+                        <h6 class="dropdown-header">加载中...</h6>
+                        <div class="divider"></div>
+                        <div style="height:80px;width:200px;"><br/>
+                            <i class="fa fa-refresh fa-spin fa-lg" style="color:#383838;"></i><br/><br/>
+                        </div>
+                    </center>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">
+                  <i class="fa fa-share-alt"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" style="font-size:14px;">
+                    <center>
+                        <h6 class="dropdown-header">感谢分享我们的网站！</h6>
+                        <div class="divider"></div>
+                        <div style="width:210px"><span style="width:16px;"></span><img src="website.jpg" width="168px" height="168px" alt="Vottery">
+                        </div>
+                        <div class="divider"></div>©&nbsp;2017&nbsp;Vottery
+                    </center>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <aside>
+        <div id="side-cards">
+            <div class="side-card1">
+                <h4 class="text-center title-bolder">当下热门</h4>
+                <div class="bar-line"></div>
+                <div class="sidecard1-list">
+                    <ul class="nav nav-tabs">
+	                    <li class="active">
+                            <a href="#latest" data-toggle="tab">最新发布</a>
+                        </li>
+                        <li>
+                            <a href="#vote-most" data-toggle="tab">最多投票</a>
+                        </li>
+                        <li>
+                            <a href="#view-most" data-toggle="tab">最多浏览</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+	                    <div class="tab-pane fade in active" id="latest">
+                            <ul class="list-data">
+                                <li>
+                                    <span class="badge badge-danger pull-left">1</span>
+                                    <a href="#">Title1</a>
+                                </li>
+                                <li>
+                                    <span class="badge badge-warning pull-left">2</span>
+                                    <a href="#">Title2</a>
+                                </li>
+                                <li>
+                                    <span class="badge badge-tip pull-left">3</span>
+                                    <a href="#">Title3</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade in" id="vote-most">
+                            <ul class="list-data">
+                               <li>
+                                    <span class="badge badge-danger pull-left">1</span>
+                                    <a href="#">Title1</a>
+                                </li>
+                                <li>
+                                    <span class="badge badge-warning pull-left">2</span>
+                                    <a href="#">Title2</a>
+                                </li>
+                                <li>
+                                    <span class="badge badge-tip pull-left">3</span>
+                                    <a href="#">Title3</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade in" id="view-most">
+                            <ul class="list-data">
+                                <li>
+                                    <span class="badge badge-danger pull-left">1</span>
+                                    <a href="#">Title1</a>
+                                </li>
+                                <li>
+                                    <span class="badge badge-warning pull-left">2</span>
+                                    <a href="#">Title2</a>
+                                </li>
+                                <li>
+                                    <span class="badge badge-tip pull-left">3</span>
+                                    <a href="#">Title3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-card2">
+                <h4 class="text-center title-bolder">为您推荐</h4>
+                <div class="bar-line"></div>
+                <div class="sidecard2-list">
+                    <ul class="list-data">
+                        <li><span class="badge badge-default pull-left">1</span><a href="#">Title 1</a></li>
+                        <li><span class="badge badge-default pull-left">2</span><a href="#">Title 2</a></li>
+                        <li><span class="badge badge-default pull-left">3</span><a href="#">Title 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="search-card">
+            <h4 class="text-center title-bolder">我想找 ...</h4>
+            <div class="bar-line"></div>
+            <div class="sort-list">
+                <code>依分类</code>
+                <ul class="flex-list">
+                    <li><a href="">人物</a></li>
+                    <li><a href="">动物</a></li>
+                    <li><a href="">植物</a></li>
+                    <li><a href="">时事</a></li>
+                    <li><a href="">萌宠</a></li>
+                    <li><a href="">歌曲</a></li>
+                    <li><a href="">影视</a></li>
+                    <li><a href="">生活</a></li>
+                    <li><a href="">杂类</a></li>
+                    <li><a href="">其它</a></li>
+                </ul>
+            </div>
+            <div class="tag-list">
+                <code>依标签</code>
+                <ul class="flex-list">
+                    <li><a href="#">经典</a></li>
+                    <li><a href="#">必看</a></li>
+                    <li><a href="#">必听</a></li>
+                    <li><a href="#">华语流行</a></li>
+                    <li><a href="#">欧美流行</a></li>
+                    <li><a href="#">周杰伦</a></li>
+                    <li><a href="#">林俊杰</a></li>
+                    <li><a href="#">S.H.E</a></li>
+                    <li><a href="#">Michael Jackson</a></li>
+                    <li><a href="#">Taylor Swift</a></li>
+                    <li><a href="#">Bruno Mars</a></li>
+                    <li><a href="#">电子元素</a></li>
+                    <li><a href="#">中国风</a></li>
+                    <li><a href="#">Hip-hop</a></li>
+                    <li><a href="#">Top 10</a></li>
+                    <li><a href="#">日常</a></li>
+                    <li><a href="#">调查</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">笔记本</a></li>
+                    <li><a href="#">Surface</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <section id="vote-recommend">
+        <div id="carousel-news">
+            <div class="today-topics">
+                <h3 class="text-center news-tip">今天，您想看点什么？</h3>
+                <div class="today-news"></div>
+            </div>
+            <div class="vote-actions">
+                <h5 class="text-center text-muted action-tip">不感兴趣？ 试试 ...</h5>
+                <ul>
+                    <li><a href="#" class="btn-new">创建投票</a></li>
+                    <li><a href="#" class="btn-free">随便看看</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="carousel-today" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-today" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-today" data-slide-to="1"></li>
+                <li data-target="#carousel-today" data-slide-to="2"></li>
+                <li data-target="#carousel-today" data-slide-to="3"></li>
+                <li data-target="#carousel-today" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner"></div>
+            <a class="left carousel-control" href="#carousel-today" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#carousel-today" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </section>
+    <section id="vote-content">
+        <div id="vote-cards"></div>
+    </section>
+   
+    <footer id="footer">
+        <div class="container site-footer-container">
+            <div class="site-footer" role="contentinfo">
+                <ul class="site-footer-links">
+                    <li class="footer_mark">©&nbsp;2017&nbsp;&nbsp;Vottery&nbsp;@higherloft.com</li>
+                    <li><a href="http://higherloft.com">访问官网</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+                <a href="http://vottery.higherloft.com" aria-label="Homepage" class="site-footer-mark" title="VOTTERY">
+                    <svg aria-hidden="true" class="octicon octicon-mark-github" style="background-image:url(vottery-ico.svg);width: 24px;height:24px;"></svg>
+                </a>
+                <ul class="site-footer-links float-right">
+                    <li><a href="http://support.higherloft.com">联系我们</a></li>
+                    <li><a href="#">帮助与支持</a></li>
+                    <li><a href="#">最新动态</a></li>
+                    <li><a href="#">鸣谢</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>    
+    <script src="../js/art-template.4.12.1.js"></script>
+    <script src="../js/getBlended.jQuery.js"></script>
+    <script src="../js/vottery-main.js"></script>
+
+</body>
+
+</html>
+
+

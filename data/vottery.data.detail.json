@@ -1,0 +1,28 @@
+{
+    "userInfo":{
+            "id": "oooyou",
+            "time": "2017-8-10",
+            "view": 2,
+            "comment": 0,
+            "link":"..\\htmls\\vote_detail.html",
+            "thumbnail": "..\\images\\thumbnail\\user\\oooyou.jpg",
+            "unique": "001",
+            "content": {
+                "title": "选出你心目中的中国风歌曲",
+                "label": ["周杰伦", "经典", "中国风"],
+                "description": "周杰伦（Jay Chou），1979年1月18日出生于台湾省新北市，中国台湾流行乐男歌手、音乐人、演员、导演、编剧、监制、商人。",
+                "article":"《叶惠美》里的《东风破》%|%《十一月的萧邦》里的《发如雪》%|%《依然范特西》里的《千里之外》、《菊花台》%|%《我很忙》里的《青花瓷》%|%《魔杰座》里的《兰亭序》%|%《跨时代》里的《烟花易冷》"
+            }
+    },
+    "voteInfo": {
+        "unique": "001",
+        "Type": "text",
+        "Options": [
+            "周杰伦", "林俊杰", "王力宏", "陈奕迅", "蔡依林", "蔡健雅", "张惠妹", "Hebe"],
+        "Attachment": {
+            "desc": "",
+            "pics": ["user\\oooyou\\src\\img\\2017081000101.jpg", "user\\oooyou\\src\\img\\2017081000102.jpg", "", "user\\oooyou\\src\\img\\2017081000103.jpg", "", "", "", "user\\oooyou\\src\\img\\2017081000104.jpg"],
+            "links": []
+        }
+    }
+}

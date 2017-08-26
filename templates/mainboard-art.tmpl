@@ -1,0 +1,51 @@
+[".carousel-inner"]
+{{each main.recommendation.slider value index}}
+<div class="item {{if index==0}}active{{/if}}">
+    <img alt="" src="{{value.pic}}">
+    <div class="container">
+        <div class="veil"></div>
+        <div class="carousel-caption">
+            <a href="{{value.link}}">
+                <h1>{{value.title}}</h1>
+                <p>{{value.caption}}</p>
+            </a>
+        </div>
+    </div>
+</div>
+{{/each}}
+[".today-news"]
+{{each main.recommendation.news value index}}
+<span><h4 class="news-title text-center">{{value.title}}</h4></span>
+<p class="text-center">{{value.desc}}<br />...<br />...<br /></p>
+{{/each}}
+["#vote-cards"]
+{{each user.userInfo value index}}
+<div class="panel panel{{$imports.getStyle("panel")}}">
+    <div class="panel-heading">
+        <h3 class="panel-title bold">{{value.content.title}}</h3>
+        <div class="panel-label">
+            {{each value.content.label val}}
+            <span class="label label{{$imports.getStyle("label")}}">{{val}}</span> {{/each}}
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="thumbnail">
+            <img src="{{value.thumbnail}}">
+        </div>
+        <div class="description">
+            {{if value.content.description.length
+            <66}} <p>{{value.content.description}}</p>
+                {{else}}
+                <p>{{value.content.description.slice(0,63)+" ..."}}</p>
+                {{/if}}
+        </div>
+    </div>
+    <div class="panel-footer">
+        <span><i class="fa fa-clock-o"></i> {{value.time}} </span>
+        <span><i class="fa fa-eye"></i> {{value.view}} </span>
+        <span><i class="fa fa-commenting-o"></i> {{value.comment}} </span>
+        <span><i class="fa fa-user-o"></i> {{value.id}} </span>
+        <a href="{{value.link}}"><button class="btn btn{{$imports.getStyle("btn")}}"> 查看投票 <i class="fa fa-arrow-circle-right"></i></button></a>
+    </div>
+</div>
+{{/each}}
