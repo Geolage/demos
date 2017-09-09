@@ -190,27 +190,29 @@ function GetBlended() {
         var regex = /(vottery\.)?data\.[\w\d.]+\.(json|txt|html|htm|xml)\b/g; // 确保数据格式正确
         var data_tmp = new Object();
         var echo_count = 0,
-            failed_allow = urls.length * 3; // 允许重新加载次数
+            failed_allow = 3; // 允许重新加载次数
         for (var url of urls) {
+            var failed_count=0;
             (function get(link) {
                 try {
                     var match = link.match(regex);
                     if (!match) throw new Error('找不到数据源！文件命名可能有误！');
                     var key = match[0].split('.').slice(-2, -1).toString();
                     $.get(link).done(function (data) {
-                        data_tmp[key] = data;
                         echo_count++;
+                        data_tmp[key] = data;
                     }).fail(function (err) {
-                        if (failed_allow > 0) {
+                        if (failed_count<failed_allow) {
                             get(link);
                             console.log('Error! Reloading ...');
+                            failed_count++;
+                        }
+                        else{
                             failed_allow--;
                         }
                     });
                 } catch (err) {
                     console.log(err + '\n' + '错误来源： ' + link + '\n' + "url格式请参照：" + '"...data.[DataName].json|txt|html|htm|xml|..."，' + '或修改正则表达式(regex)');
-                } finally {
-                    failed_allow -= 3;
                 }
             })(url)
         }
