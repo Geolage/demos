@@ -117,10 +117,9 @@ function GetBlended() {
         var def = $.Deferred();
         var regex = new RegExp(/\["[#\.]?[\w\s\.#-_]*"\]/g);
         var tmpl_tmp = new Object();
-        var echo_count = 0,
-            failed_allow = urls.length * 3;     //允许重新加载次数
-        for (var url of urls) {
-            (function get(link) {
+        var echo_count = 0,failed_count=0,failed_allow = 3;     //允许重新加载次数
+        for (var url of urls) { 
+            (function get(link,f_count,f_allow) {
                 $.get(link).done(function (data) {
                     try {
                         if (!(link.match(/(\.tmpl|\.art|\.txt)$/).length)) {     // 检查模板格式
@@ -144,22 +143,23 @@ function GetBlended() {
                         echo_count++;
                     } catch (err) {
                         console.log(err + '\n\t' + '   来源：' + ' "' + link + '"')
-                    } finally {
-                        failed_allow -= 3;
                     }
                 }).fail(function (err) {
-                    if (failed_allow > 0) {
-                        setTimeout(function () {
-                            get(link);
-                            console.log('Error! Reloading ...');
-                            failed_allow--;
-                        }, (7 - failed_allow) * 100);
+                    if (f_count<f_allow) {
+                        setTimeout(function() {
+                             get(link,f_count,f_allow);
+                             console.log('Error! Reloading ...');
+                        }, (f_count++) * 50);
+                    }
+                    else{
+                        throw new Error('无法加在此资源！');
+                        failed_count++;
                     }
                 });
-            })(url)
+            })(url,failed_count,failed_allow)
         }
         setTimeout(function delay() {
-            if (echo_count == urls.length || failed_allow == 0) {
+            if (echo_count == urls.length || failed_count == urls.length) {
                 if (echo_count > 0) {
                     def.resolve(tmpl_tmp);
                     tmpl_tmp = null;
@@ -167,7 +167,7 @@ function GetBlended() {
                     console.log('加载出错！请检查url是否有效！');
                     return;
                 }
-            } else setTimeout(delay, 150);
+            } else setTimeout(delay, 50);
         }, 20);
         return def.promise();
     }
@@ -189,11 +189,9 @@ function GetBlended() {
         var def = $.Deferred();
         var regex = /(vottery\.)?data\.[\w\d.]+\.(json|txt|html|htm|xml)\b/g; // 确保数据格式正确
         var data_tmp = new Object();
-        var echo_count = 0,
-            failed_allow = 3; // 允许重新加载次数
+        var echo_count = 0,failed_count=0,failed_allow = 3;
         for (var url of urls) {
-            var failed_count=0;
-            (function get(link) {
+            (function get(link,f_count,f_allow) {
                 try {
                     var match = link.match(regex);
                     if (!match) throw new Error('找不到数据源！文件命名可能有误！');
@@ -202,22 +200,24 @@ function GetBlended() {
                         echo_count++;
                         data_tmp[key] = data;
                     }).fail(function (err) {
-                        if (failed_count<failed_allow) {
-                            get(link);
-                            console.log('Error! Reloading ...');
-                            failed_count++;
+                        if (f_count<f_allow) {
+                            setTimeout(function() {
+                                 get(link);
+                                 console.log('Error! Reloading ...');
+                            }, (f_count++) * 50);
                         }
                         else{
-                            failed_allow--;
+                            throw new Error('无法加在此资源！');
+                            failed_count++;
                         }
                     });
                 } catch (err) {
                     console.log(err + '\n' + '错误来源： ' + link + '\n' + "url格式请参照：" + '"...data.[DataName].json|txt|html|htm|xml|..."，' + '或修改正则表达式(regex)');
                 }
-            })(url)
+            })(url,failed_count,failed_allow)
         }
         setTimeout(function delay() {
-            if (echo_count == urls.length || failed_allow == 0) {
+            if (echo_count == urls.length || failed_count == urls.length) {
                 if (echo_count > 0) {
                     def.resolve(data_tmp);
                     data_tmp = null;
@@ -225,7 +225,7 @@ function GetBlended() {
                     console.log('加载出错！请检查url是否有效！');
                     return;
                 }
-            } else setTimeout(delay, 150);
+            } else setTimeout(delay, 50);
         }, 20);
         return def.promise();
     }
