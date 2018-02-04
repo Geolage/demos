@@ -1,0 +1,160 @@
+* {
+  font-family: Microsoft YaHei;
+}
+
+html,body{
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Pingfang SC,Microsoft YaHei,consola,Verdana,Arial,Tahoma,sans-serif";
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  background: #fff;
+}
+
+.nav-bar{
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+}
+
+.nav-bar>*{
+  display: inline-block;
+}
+
+.nav-bar a{
+  margin-right: 20px;
+  color: #666;
+  text-decoration: none !important;
+}
+
+.nav-bar a:focus{
+  outline: none;
+}
+
+.nav-bar a,.nav-bar a:hover{
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+}
+
+.nav-bar .nav-action{
+  margin: 0 20px;
+}
+
+.nav-bar .nav-action .t-counter{
+  margin-right:20px
+}
+
+.nav-bar .nav-action .action:hover{
+  color: #101010;
+}
+
+.nav-bar .nav-btn{
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.nav-bar .nav-btn{
+  background: #26b3e2;
+  color: #fff;
+}
+
+.nav-bar .nav-btn.action-close{
+  background: #e44c38;
+}
+
+.frame-desktop{
+  height: 100%;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+.frame-mobile{
+  width: 300px;
+  height: 590px;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background: url("../images/model-phone.png") no-repeat;
+  background-size: contain;
+  z-index: 9999;
+}
+
+@media (max-width:480px){
+  .nav-bar{
+    text-align: center;
+  }
+  .frame-mobile{
+    display: none;
+  }
+  .nav-bar .nav-action{
+    margin: 0 10px;
+  }
+  .nav-bar a,
+  .nav-bar .nav-action .t-counter{
+    margin-right: 6px
+  }
+  .nav-bar .nav-btn{
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+  }
+  /* .nav-bar .nav-btn.action-mb{
+    display: none;
+  } */
+}
+
+.frame-mobile-wrapper{
+  width: 272px;
+  height: 472px;
+  position: absolute;
+  top: 53px;
+  left: 14px;
+  overflow: hidden;
+}
+
+#modal-mobile-preview .modal-title{
+  font-weight: bolder;
+}
+
+#modal-mobile-preview .modal-body{
+  padding:50px 30px;
+}
+
+#modal-mobile-preview .modal-body .preview-box{
+  width: 350px;
+  height: 688px;
+  margin:0 auto; 
+  position: relative;
+  background: url(../images/model-phone.png) no-repeat;
+  background-size: cover;
+}
+
+#modal-mobile-preview .preview-box .pv-wrapper{
+  width:320px;
+  height: 556px;
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  overflow: hidden;
+}
+

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>海泉集团oa管理系统</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <link rel="stylesheet" href="../../assets/global/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/global/bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" href="../../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"><!-- 时间控件 -->
+
+        <!-- 开始 下拉选择控件 -->
+        <link rel="stylesheet" href="../../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+        <!-- 结束 下拉选择控件 -->
+        <!-- 开始 全局控制模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/layout.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/light.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/default.css">
+        <link rel="stylesheet" href="../../assets/global/simple-line-icons/simple-line-icons.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/global.css">
+        <!-- 结束 全局控制模块 -->
+
+        <!-- 开始  样式文件 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/people.css">
+        <!-- 结束  样式文件 -->
+        <link rel="stylesheet" href="../../assets/layout/custom.css">
+        <link rel="stylesheet" href="../../assets/layout/profile.css">
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
+
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <img src="../../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <div id="menu-left" class="pull-left">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="../index.html"><i class="icon-speedometer"></i><span>桌面</span></a>
+                        </li>
+                        <li>
+                            <a href="../flow/index.html"><i class="icon-shuffle"></i><span>流程</span></a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="icon-note"></i><span>日志</span></a>
+                        </li>
+                        <li>
+                            <a href="../notice/index.html"><i class="icon-volume-2"></i><span>通知</span></a>
+                        </li>
+                        <li>
+                            <a class="active" href="../personnel/index.html"><i class="icon-users"></i><span>人事</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form" action="page_general_search_2.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-success"> 7 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">12 pending</span> notifications</h3>
+                                        <a href="page_user_profile_1.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-success">
+                                                            <i class="fa fa-plus"></i>
+                                                        </span> New user registered. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Server #12 overloaded. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">10 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Server #2 not responding. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">14 hrs</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> Application error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">2 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Database overloaded 68%. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> A user IP blocked. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">4 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Storage Server #4 not responding dfdfdfd. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">5 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> System Error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">9 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Storage server failed. </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-danger"> 4 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>You have
+                                            <span class="bold">7 New</span> Messages</h3>
+                                        <a href="app_inbox.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">16 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Bob Nilson </span>
+                                                        <span class="time">2 hrs </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">40 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">46 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END INBOX DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- 开始 系统设置 -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-settings"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:;"> 流程设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 日志设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 通知设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 人事设置 </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;"> 系统设置 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 结束 系统设置 -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> 李振华 </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../../assets/layout/img/user-img.jpg" /> </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="user/index.html">
+                                            <i class="icon-user"></i> 个人信息 </a>
+                                    </li>
+                                    <li>
+                                        <a href="user/editPwd.html">
+                                            <i class="icon-lock"></i> 修改密码 </a>
+                                    </li>
+                                    <li>
+                                        <a href="##">
+                                            <i class="icon-logout"></i> 注销 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">人员管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start">
+                                    <a href="index.html" class="nav-link ">
+                                        <span class="title">人员查询</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start">
+                                    <a href="add-people.html" class="nav-link ">
+                                        <span class="title">新建人员</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start">
+                                    <a href="user-info.html" class="nav-link ">
+                                        <span class="title">个人信息</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">密码设置</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">人员生日</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">组织管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">我的下属</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">组织架构</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">职位类别</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">职位级别</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">人事档案设置</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">储备人员库</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start active open">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">新增人员</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">人员查询</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+
+                    <!-- BEGIN PAGE BREADCRUMB -->
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <a href="index.html">人事</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span class="active">新增人员</span>
+                        </li>
+                    </ul>
+                    <!-- END PAGE BASE CONTENT -->
+                    <!-- 开始 第十栏目 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="profile-sidebar">
+                                <div class="portlet light profile-sidebar-portlet bordered" style="margin-bottom: 0;">
+                                    <div class="profile-userpic">
+                                        <img src="../../assets/layout/img/profile_user.jpg" class="img-responsive" alt=""> </div>
+                                    <div class="profile-usertitle">
+                                        <div class="profile-usertitle-name"> 李振华 </div>
+                                        <div class="profile-usertitle-job"> 董事长 </div>
+                                    </div>
+                                    <div class="profile-userbuttons">
+                                        <button type="button" class="btn btn-circle green btn-sm">上传头像</button>
+                                        <button type="button" class="btn btn-circle red btn-sm">保存头像</button>
+                                    </div>
+                                     <br>
+                                </div>
+                            </div>
+
+                        <div class="profile-content">
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject bold uppercase">新增人员</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <form action="" class="form-horizontal">
+                                        <div class="form-body">
+                                            <h4 class="font-green">基本信息</h4>
+                                            <hr class="border-green">
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="form_control_1"> <span class="text-danger">* </span>账号：</label>
+                                              <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="" value="李振华">
+                                                <div class="form-control-focus"> </div>
+                                                <span class="help-block">用户中文姓名...</span>
+                                              </div>
+                                            </div>
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>性别：</label>
+                                              <div class="col-md-9">
+                                                <div class="md-radio-inline">
+                                                    <div class="md-radio">
+                                                        <input type="radio" id="radio53" name="radio2" class="md-radiobtn" checked="">
+                                                        <label for="radio53">
+                                                            <span class="inc"></span>
+                                                            <span class="check"></span>
+                                                            <span class="box"></span>女 </label>
+                                                    </div>
+                                                    <div class="md-radio">
+                                                        <input type="radio" id="radio54" name="radio2" class="md-radiobtn">
+                                                        <label for="radio54">
+                                                            <span class="inc"></span>
+                                                            <span class="check"></span>
+                                                            <span class="box"></span> 男</label>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>手机：</label>
+                                              <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="" value="">
+                                                <div class="form-control-focus"> </div>
+                                                <span class="help-block">常用的手机号码...</span>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>出生日期：</label>
+                                              <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="" value="">
+                                                <div class="form-control-focus"> </div>
+                                                <span class="help-block">格式为：2017-02-02</span>
+                                              </div>
+                                            </div>
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">参加工作年份：</label>
+                                              <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="" value="">
+                                                <div class="form-control-focus"> </div>
+                                                <span class="help-block">第一次参加工作的时间，格式为：2017-02-02</span>
+                                              </div>
+                                            </div>
+                                            <h4 class="font-green">求职信息</h4>
+                                            <hr class="border-green">
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">求职意向：</label>
+                                              <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="" value="">
+                                                <div class="form-control-focus"> </div>
+                                                <span class="help-block">求职的意向职位，多个用","隔开...</span>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">求职状态：</label>
+                                              <div class="col-md-9">
+                                                <select class="form-control" id="form_control_1">
+                                                    <option value="0">离职-随时到岗</option>
+                                                    <option value="1">在职-暂不考虑</option>
+                                                    <option value="2">在职-考虑机会</option>
+                                                    <option value="3">在职-到岗待定</option>
+                                                    <option value="4">其他</option>
+                                                </select>
+                                                <div class="form-control-focus"> </div>
+                                                <span class="help-block">选择人员的求职状态...</span>
+                                              </div>
+                                            </div>
+
+                                            <h4 class="font-green">工作经历</h4>
+                                            <hr class="border-green">
+
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">工作经历：</label>
+                                              <div class="col-md-9">
+                                                <div class="input-group">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" name="memo" rows="4" placeholder="格式如：
+1、XXX公司担任XXX职位。
+2、任职期间2015年5月-2017年4月。
+3、工作内容是从事软件开发和软件测试工作"></textarea>
+                                                            <div class="form-control-focus"> </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="input-group-btn">
+                                                        <button id="" class="btn red btn-sm" type="button">-</button>
+                                                    </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">工作经历2：</label>
+                                              <div class="col-md-9">
+                                                <div class="input-group">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" name="memo" rows="4" placeholder="格式如：
+1、XXX公司担任XXX职位。
+2、任职期间2015年5月-2017年4月。
+3、工作内容是从事软件开发和软件测试工作"></textarea>
+                                                            <div class="form-control-focus"> </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="input-group-btn">
+                                                        <button id="" class="btn red btn-sm" type="button">-</button>
+                                                    </span>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <a href="javascript:;" class="btn green">新增</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="font-green">教育经历</h4>
+                                            <hr class="border-green">
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">教育经历：</label>
+                                              <div class="col-md-9">
+                                                <div class="input-group">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" name="memo" rows="4" placeholder="格式如：
+1、教育期间2015年5月-2017年4月。
+2、就读于XXX大学，IBM专业
+3、获得学历IBM管理博士学位"></textarea>
+                                                            <div class="form-control-focus"> </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="input-group-btn">
+                                                        <button id="" class="btn red btn-sm" type="button">-</button>
+                                                    </span>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">教育经历2：</label>
+                                              <div class="col-md-9">
+                                                <div class="input-group">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" name="memo" rows="4" placeholder="格式如：
+1、教育期间2015年5月-2017年4月。
+2、就读于XXX大学，IBM专业
+3、获得学历IBM管理博士学位"></textarea>
+                                                            <div class="form-control-focus"> </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="input-group-btn">
+                                                        <button id="" class="btn red btn-sm" type="button">-</button>
+                                                    </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <a href="javascript:;" class="btn green">新增</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="font-green">其他描述</h4>
+                                            <hr class="border-green">
+
+                                            <div class="form-group form-md-line-input">
+                                                <label class="col-md-3 control-label" for="">个人说明：</label>
+                                                <div class="col-md-9">
+                                                    <div class="editor-box">
+                                                        <p>这里放个富文本编辑器</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-md-line-input">
+                                              <label class="col-md-3 control-label" for="">上传附件：</label>
+                                              <div class="col-md-9">
+                                                <div class="">
+                                                    <button type="button" class="btn green  btn-sm">上传附件</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-md-offset-3 col-md-9">
+                                                    <a href="javascript:;" class="btn green">保存</a>
+                                                    <a href="javascript:;" class="btn default">取消</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- 结束 第十栏目 -->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+            <a href="javascript:;" class="page-quick-sidebar-toggler">
+                <i class="icon-login"></i>
+            </a>
+
+            <!-- END QUICK SIDEBAR -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; 版权所属：
+                <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+
+        <!-- 开始 弹出草稿箱 -->
+        <div class="modal fade" id="edit-people-modal" tabindex="-1" role="dialog" aria-labelledby="log-modal-draft-abel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="log-modal-draft-label">设置成员所在部门</h4>
+              </div>
+              <div class="modal-body">
+                <div class="edit-people-box">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="edit-people-scrollable">
+                                <h5>选择成员所在部门：</h5>
+                                <ul id="tree-edit-people" class="ztree"></ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="edit-people-scrollable">
+                                <h5>成员将属于以下部门：</h5>
+                                <div class="bootstrap-tagsinput ">
+                                    <div class="border-bottom">
+                                        财务部
+                                        <span class="fa fa-close"></span>
+                                    </div>
+                                    <div class="border-bottom">
+                                        财务部
+                                        <span class="fa fa-close"></span>
+                                    </div>
+                                    <div class="border-bottom">
+                                        行政部
+                                        <span class="fa fa-close"></span>
+                                    </div>
+                                    <div class="border-bottom">
+                                        总经办
+                                        <span class="fa fa-close"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary blue" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-default grey" data-dismiss="modal">关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 结束 弹出草稿箱 -->
+
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+        <script src="../../assets/global/plugins/respond.min.js"></script>
+        <script src="../../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../../assets/global/jquery/jquery.min.js"></script>
+        <script src="../../assets/global/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+        <script src="../../assets/global/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../../assets/global/layout4/scripts/layout.js"></script>
+    </body>
+
+</html>

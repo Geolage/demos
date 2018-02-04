@@ -1,0 +1,49 @@
+
+/* 表单显示 */
+
+
+
+#rendered-form-void .form-group label .fb-required{
+  color: #ed6b75;
+}
+#rendered-form-void .form-group label .tooltip-element {
+    color: #fff;
+    background: #36c6d3;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px !important;
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+/* 流程发起模块 */
+
+.custom-flow-box .custom-user-items{
+  display: inline-block;
+  margin: 0 10px;
+}
+.custom-flow-box .custom-user-items .flow-icon{
+  font-size: 24px;
+}
+.custom-flow-box .custom-user-items a{
+  display: inline-block;
+  color: #333;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  border-radius: 50px !important;
+  background: #e9ecf3;
+  border: #ddd solid 1px;
+  margin-bottom: 10px;
+}
+
+
+.custom-flow-input-border{
+  padding: 20px 10px 5px 10px;
+  border: #3598dc solid 1px;
+  margin-top: 20px;
+}

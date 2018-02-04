@@ -1,0 +1,106 @@
+  .font-green {
+      color: #32c5d2 !important;
+  }
+  .visible-ie8 {
+  display: none; }
+
+.ie8 .visible-ie8 {
+  display: inherit !important; }
+
+.visible-ie9 {
+  display: none; }
+
+.ie9 .visible-ie9 {
+  display: inherit !important; }
+
+.hidden-ie8 {
+  display: inherit; }
+
+.ie8 .hidden-ie8 {
+  display: none !important; }
+
+.hidden-ie9 {
+  display: inherit; }
+
+.ie9 .hidden-ie9 {
+  display: none !important; }
+  .btn, .form-control {
+    outline: none;
+    box-shadow: none!important;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.login {
+    background-color: #364150 !important
+}
+
+.login .content {
+    background-color: #eceef1;
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto 10px;
+    padding: 10px 20px 10px;
+    overflow: hidden;
+    position: relative
+}
+
+.login .content h3 {
+    color: #4db3a5;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400 !important;
+    margin-bottom: 15px;
+}
+
+
+.login .content .forget-form, .login .content .login-form {
+    padding: 0;
+    margin: 0
+}
+
+.login .content .form-control {
+    background-color: #dde3ec;
+    height: 43px;
+    color: #8290a3;
+    border: 1px solid #dde3ec
+}
+
+.login .content .form-control:active, .login .content .form-control:focus {
+    border: 1px solid #c3ccda
+}
+
+.login .content .form-control::-moz-placeholder {
+    color: #8290a3;
+    opacity: 1
+}
+
+.login .content .form-control:-ms-input-placeholder {
+    color: #8290a3
+}
+
+.login .content .form-control::-webkit-input-placeholder {
+    color: #8290a3
+}
+
+
+.login .content .form-actions {
+    clear: both;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    padding: 0 0 15px 0;
+}
+
+
+.login .content .form-actions .btn {
+    margin-top: 1px;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    width: 100%;
+}
+
+.btn.green:not(.btn-outline) {
+    color: #FFFFFF;
+    background-color: #32c5d2;
+    border-color: #32c5d2;
+}

@@ -1,0 +1,59 @@
+@media (max-width: 767px){
+
+  /* 导航模块 */
+  .page-header.navbar,
+  .page-breadcrumb.breadcrumb,
+  .page-footer{
+      display: none !important;
+  }
+  /* 表格模块 */
+  .bootstrap-table .card-views {
+
+  }
+  .bootstrap-table .card-views .card-view{
+    padding: 5px 0;
+  }
+  .tab-pane .dashboard-stat{
+    margin-bottom: 25px !important;
+  }
+  /* 流程审批 */
+  .green.J_operation{
+    margin-bottom: 10px;
+  }
+  /* 流程切换 */
+  #processGraphWrapper{
+    overflow-y: auto;
+  }
+  /* 日志模块 */
+  .timeline-item .timeline-badge{
+    width: 100%;
+    float: none;
+    padding-right: 0;
+  }
+  .timeline .timeline-icon{
+    display: inline-block;
+  }
+  .timeline-item .timeline-badge .timeline-date{
+    display: inline-block;
+    font-size: 16px;
+  }
+  .timeline-item .timeline-body{
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .timeline-item .timeline-body .timeline-body-arrow{
+    display: none;
+  }
+  .timeline-body-content table.table-hover tr>td:first-child{
+    display: inline-block;
+    width: 100%;
+    font-weight: 700;
+    color: #333;
+  }
+  .timeline-body-content table.table-hover tr>td{
+    width: 100%;
+    display: inline-block;
+    padding: 5px 0;
+  }
+}

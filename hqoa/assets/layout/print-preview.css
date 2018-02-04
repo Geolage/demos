@@ -1,0 +1,21 @@
+.print-form-box{
+  margin-bottom: 20px;
+}
+.print-form-box,
+.print-msg-box{
+  padding: 20px;
+  border: 1px solid #000 ;
+}
+.form-horizontal .form-group.form-md-line-input{
+  margin-bottom: 5px;
+}
+.print-msg-box .table>tbody>tr>td{
+  vertical-align: middle;
+}
+.separator-dashed{
+  border: 0.5px dashed #666;
+  display: none;
+}
+.table > tbody + tbody{
+  border: none;
+}

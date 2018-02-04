@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>海泉集团oa管理系统</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <link rel="stylesheet" href="../../assets/global/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/global/bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" href="../../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"><!-- 时间控件 -->
+
+        <!-- 开始 下拉选择控件 -->
+        <link rel="stylesheet" href="../../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+        <!-- 结束 下拉选择控件 -->
+        <!-- 开始 全局控制模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/layout.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/light.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/default.css">
+        <link rel="stylesheet" href="../../assets/global/simple-line-icons/simple-line-icons.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/global.css">
+        <!-- 结束 全局控制模块 -->
+        <!-- 开始  树状菜单 -->
+        <link href="../../assets/global/jstree/metroStyle/metroStyle.css" rel="stylesheet" type="text/css" />
+        <!-- 结束  树状菜单 -->
+        <!-- 开始  输入标签 -->
+        <!-- <link rel="stylesheet" href="../../assets/global/bootstrap-tagsinput/bootstrap-tagsinput.css"> -->
+        <!-- 结束  输入标签 -->
+        <!-- 开始  样式文件 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/people.css">
+        <!-- 结束  样式文件 -->
+        <link rel="stylesheet" href="../../assets/layout/custom.css">
+        <link rel="stylesheet" href="../../assets/layout/profile.css">
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
+
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <img src="../../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <div id="menu-left" class="pull-left">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="../index.html"><i class="icon-speedometer"></i><span>桌面</span></a>
+                        </li>
+                        <li>
+                            <a href="../flow/index.html"><i class="icon-shuffle"></i><span>流程</span></a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="icon-note"></i><span>日志</span></a>
+                        </li>
+                        <li>
+                            <a href="../notice/index.html"><i class="icon-volume-2"></i><span>通知</span></a>
+                        </li>
+                        <li>
+                            <a class="active" href="../personnel/index.html"><i class="icon-users"></i><span>人事</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form" action="page_general_search_2.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-success"> 7 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">12 pending</span> notifications</h3>
+                                        <a href="page_user_profile_1.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-success">
+                                                            <i class="fa fa-plus"></i>
+                                                        </span> New user registered. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Server #12 overloaded. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">10 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Server #2 not responding. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">14 hrs</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> Application error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">2 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Database overloaded 68%. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> A user IP blocked. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">4 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Storage Server #4 not responding dfdfdfd. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">5 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> System Error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">9 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Storage server failed. </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-danger"> 4 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>You have
+                                            <span class="bold">7 New</span> Messages</h3>
+                                        <a href="app_inbox.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">16 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Bob Nilson </span>
+                                                        <span class="time">2 hrs </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">40 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">46 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END INBOX DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- 开始 系统设置 -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-settings"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:;"> 流程设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 日志设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 通知设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 人事设置 </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;"> 系统设置 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 结束 系统设置 -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> 李振华 </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../../assets/layout/img/user-img.jpg" /> </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="user/index.html">
+                                            <i class="icon-user"></i> 个人信息 </a>
+                                    </li>
+                                    <li>
+                                        <a href="user/editPwd.html">
+                                            <i class="icon-lock"></i> 修改密码 </a>
+                                    </li>
+                                    <li>
+                                        <a href="##">
+                                            <i class="icon-logout"></i> 注销 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">人员管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start ">
+                                    <a href="index.html" class="nav-link ">
+                                        <span class="title">人员查询</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start">
+                                    <a href="add-people.html" class="nav-link ">
+                                        <span class="title">新建人员</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start active open">
+                                    <a href="user-info.html" class="nav-link ">
+                                        <span class="title">个人信息</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">密码设置</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">人员生日</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">组织管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">我的下属</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">组织架构</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">职位类别</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">职位级别</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">人事档案设置</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+
+                    <!-- BEGIN PAGE BREADCRUMB -->
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <a href="index.html">人事</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span class="active">个人信息</span>
+                        </li>
+                    </ul>
+                    <!-- END PAGE BASE CONTENT -->
+                    <!-- 开始 第十栏目 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- BEGIN PROFILE SIDEBAR -->
+                            <div class="profile-sidebar">
+                                <!-- PORTLET MAIN -->
+                                <div class="portlet light profile-sidebar-portlet bordered" style="margin-bottom: 0; border-bottom: none !important;">
+                                    <!-- SIDEBAR USERPIC -->
+                                    <div class="profile-userpic">
+                                        <img src="../../assets/layout/img/profile_user.jpg" class="img-responsive" alt=""> </div>
+                                    <!-- END SIDEBAR USERPIC -->
+                                    <!-- SIDEBAR USER TITLE -->
+                                    <div class="profile-usertitle">
+                                        <div class="profile-usertitle-name"> 李振华 </div>
+                                        <div class="profile-usertitle-job"> 董事长 </div>
+                                    </div>
+                                    <!-- END SIDEBAR USER TITLE -->
+                                    <!-- SIDEBAR BUTTONS -->
+                                    <div class="profile-userbuttons">
+                                        <button type="button" class="btn btn-circle green btn-sm">上传头像</button>
+                                        <button type="button" class="btn btn-circle red btn-sm">保存头像</button>
+                                    </div>
+                                     <br>
+                                    <!-- END SIDEBAR BUTTONS -->
+                                </div>
+                                <!-- END PORTLET MAIN -->
+                                <!-- PORTLET MAIN -->
+                                <div class="portlet light bordered">
+                                    <!-- STAT -->
+                                    <div class="row list-separated">
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                            <div class="uppercase profile-stat-title"> 783 </div>
+                                            <div class="uppercase profile-stat-text"> 相关流程 </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                            <div class="uppercase profile-stat-title"> 83 </div>
+                                            <div class="uppercase profile-stat-text">  提交日志</div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                            <div class="uppercase profile-stat-title"> 219 </div>
+                                            <div class="uppercase profile-stat-text"> 下属人员 </div>
+                                        </div>
+                                    </div>
+                                    <!-- END STAT -->
+                                </div>
+                                <!-- END PORTLET MAIN -->
+                            </div>
+                            <!-- END BEGIN PROFILE SIDEBAR -->
+                            <!-- BEGIN PROFILE CONTENT -->
+                            <div class="profile-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="portlet light bordered">
+                                            <div class="portlet-title tabbable-line">
+                                                <div class="caption caption-md">
+                                                    <i class="icon-globe theme-font hide"></i>
+                                                    <span class="caption-subject font-blue-madison bold uppercase">个人信息</span>
+                                                </div>
+                                                <ul class="nav nav-tabs user-info-tabs">
+                                                    <li class="active">
+                                                        <a href="#tab_1_1" data-toggle="tab" aria-expanded="false">基本信息</a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">个人信息</a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="#tab_1_3" data-toggle="tab" aria-expanded="true">修改密码</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tab_1_4" data-toggle="tab">工作历程</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="portlet-body">
+                                                <div class="tab-content">
+                                                    <!-- PERSONAL INFO TAB -->
+                                                    <div class="tab-pane active" id="tab_1_1">
+                                                        <form action="" class="form-horizontal">
+                                                            <div class="form-body">
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="form_control_1"> 账号：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" readonly=""  value="yeyaming">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">用户中文姓名...</span>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="form_control_1">姓名：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" readonly="" value="岳亚民">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">用户中文姓名...</span>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>性别：</label>
+                                                                  <div class="col-md-9">
+                                                                    <div class="md-radio-inline">
+                                                                        <div class="md-radio">
+                                                                            <input type="radio" id="radio53" name="radio2" class="md-radiobtn" checked="">
+                                                                            <label for="radio53">
+                                                                                <span class="inc"></span>
+                                                                                <span class="check"></span>
+                                                                                <span class="box"></span>女 </label>
+                                                                        </div>
+                                                                        <div class="md-radio">
+                                                                            <input type="radio" id="radio54" name="radio2" class="md-radiobtn">
+                                                                            <label for="radio54">
+                                                                                <span class="inc"></span>
+                                                                                <span class="check"></span>
+                                                                                <span class="box"></span> 男</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>手机：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">常用的手机号码...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>编号：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">格式为：00**</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">职务：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">担任职务...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">联系电话：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">填写办公室电话...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">企业邮箱：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" disabled="" placeholder="" value="****@ahhaiquan.com  邮箱前缀由账号生产">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group form-md-line-input">
+                                                                    <label class="col-md-3 control-label" for="">设置部门：</label>
+                                                                  <div class="col-md-9">
+                                                                    <div class="input-group">
+                                                                        <div class="">
+                                                                            <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                                                <option></option>
+                                                                                <optgroup label="Alaskan">
+                                                                                    <option value="AK">Alaska</option>
+                                                                                    <option value="HI" disabled="disabled">Hawaii</option>
+                                                                                </optgroup>
+                                                                                <optgroup label="Pacific Time Zone">
+                                                                                    <option value="CA">California</option>
+                                                                                    <option value="NV">Nevada</option>
+                                                                                    <option value="OR">Oregon</option>
+                                                                                    <option value="WA">Washington</option>
+                                                                                </optgroup>
+                                                                            </select>
+                                                                        </div>
+                                                                        <span class="input-group-btn">
+                                                                            <button id="genpassword" class="btn green" type="button"> 全集团</button>
+                                                                        </span>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">设置部门：</label>
+                                                                  <div class="col-md-9">
+                                                                    <div class="">
+                                                                        <div class="row margin-bottom-20">
+                                                                            <div class="col-md-5">
+                                                                                <div class="form-group form-md-line-input has-success" style="padding-top: 0;margin: 0;">
+                                                                                    <div class="bootstrap-tagsinput"><span class="label label-info">集团公司&gt;顾问<span class="fa fa-close"></span></span> </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-5">
+                                                                                <div class="form-group form-md-line-input" style="padding-top: 0;margin: 0;">
+                                                                                    <input type="text" class="form-control" placeholder="选择负责人">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <div class="form-group form-md-line-input has-success text-canter" style="padding-top: 0;margin: 0;">
+                                                                                    <button type="button" class="btn green  btn-sm" >选择</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row margin-bottom-20">
+                                                                            <div class="col-md-5">
+                                                                                <div class="form-group form-md-line-input has-success" style="padding-top: 0;margin: 0;">
+                                                                                    <div class="bootstrap-tagsinput"><span class="label label-info">集团公司&gt;顾问<span class="fa fa-close"></span></span> </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-5">
+                                                                                <div class="form-group form-md-line-input" style="padding-top: 0;margin: 0;">
+                                                                                    <select class="form-control" id="form_control_1">
+                                                                                        <option value="0">选择</option>
+                                                                                        <option value="1">初中</option>
+                                                                                        <option value="2">高中</option>
+                                                                                        <option value="3">中技</option>
+                                                                                        <option value="4">大专</option>
+                                                                                        <option value="5">本科</option>
+                                                                                        <option value="6">研究生</option>
+                                                                                        <option value="7">硕士</option>
+                                                                                        <option value="8">博士</option>
+                                                                                        <option value="9">其他</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- <div class="col-md-2">
+                                                                                <div class="form-group form-md-line-input has-success text-canter" style="padding-top: 0;margin: 0;">
+                                                                                    <button type="button" class="btn green  btn-sm">选人</button>
+                                                                                </div>
+                                                                            </div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-actions">
+                                                                <div class="row">
+                                                                    <div class="col-md-offset-3 col-md-9">
+                                                                        <a href="javascript:;" class="btn green">保存</a>
+                                                                        <a href="javascript:;" class="btn default">取消</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- END PERSONAL INFO TAB -->
+                                                    <!-- CHANGE AVATAR TAB -->
+                                                    <div class="tab-pane" id="tab_1_2">
+                                                        <form action="" class="form-horizontal">
+                                                            <div class="form-body">
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="form_control_1"> 出生日期：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="1990-01-02">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">用户出生的日，期格式为：1980-01-01...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">民族：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="汉族">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">您的户籍民族...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">婚姻状况：</label>
+                                                                  <div class="col-md-9">
+                                                                    <div class="md-radio-inline">
+                                                                        <div class="md-radio">
+                                                                            <input type="radio" id="radio532" name="radio2" class="md-radiobtn" checked="">
+                                                                            <label for="radio532">
+                                                                                <span class="inc"></span>
+                                                                                <span class="check"></span>
+                                                                                <span class="box"></span>已婚 </label>
+                                                                        </div>
+                                                                        <div class="md-radio">
+                                                                            <input type="radio" id="radio543" name="radio2" class="md-radiobtn">
+                                                                            <label for="radio543">
+                                                                                <span class="inc"></span>
+                                                                                <span class="check"></span>
+                                                                                <span class="box"></span> 未婚</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">籍贯：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">您的户籍所在地...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">现居：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">您的现在居住地址...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">学历：</label>
+                                                                  <div class="col-md-9">
+                                                                    <select class="form-control" id="form_control_1">
+                                                                        <option value="0">选择</option>
+                                                                        <option value="1">初中</option>
+                                                                        <option value="2">高中</option>
+                                                                        <option value="3">中技</option>
+                                                                        <option value="4">大专</option>
+                                                                        <option value="5">本科</option>
+                                                                        <option value="6">研究生</option>
+                                                                        <option value="7">硕士</option>
+                                                                        <option value="8">博士</option>
+                                                                        <option value="9">其他</option>
+                                                                    </select>
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">您的最高学历...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">政治面貌：</label>
+                                                                  <div class="col-md-9">
+                                                                    <select class="form-control" id="form_control_1">
+                                                                        <option value="0">群众</option>
+                                                                        <option value="1">团员</option>
+                                                                        <option value="2">党员</option>
+                                                                        <option value="3">其他</option>
+                                                                    </select>
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">格式为：1980-01-01</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for="">家庭电话：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">填写家庭联系人电话...</span>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-actions">
+                                                                <div class="row">
+                                                                    <div class="col-md-offset-3 col-md-9">
+                                                                        <a href="javascript:;" class="btn green">保存</a>
+                                                                        <a href="javascript:;" class="btn default">取消</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- END CHANGE AVATAR TAB -->
+                                                    <!-- CHANGE PASSWORD TAB -->
+                                                    <div class="tab-pane" id="tab_1_3">
+                                                        <form action="" class="form-horizontal">
+                                                            <div class="form-body">
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>当前密码：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">输入当前密码...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>新密码：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">输入新密码...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                                <div class="form-group form-md-line-input">
+                                                                  <label class="col-md-3 control-label" for=""><span class="text-danger">* </span>确认密码：</label>
+                                                                  <div class="col-md-9">
+                                                                    <input type="text" class="form-control" placeholder="" value="">
+                                                                    <div class="form-control-focus"> </div>
+                                                                    <span class="help-block">再次确认密码...</span>
+                                                                  </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="form-actions">
+                                                                <div class="row">
+                                                                    <div class="col-md-offset-3 col-md-9">
+                                                                        <a href="javascript:;" class="btn green">保存</a>
+                                                                        <a href="javascript:;" class="btn default">取消</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- END CHANGE PASSWORD TAB -->
+                                                    <!-- PRIVACY SETTINGS TAB -->
+                                                    <div class="tab-pane" id="tab_1_4">
+                                                        <form action="#">
+                                                            <div class="table-scrollable table-scrollable-borderless">
+                                                              <table class="table table-hover table-light">
+                                                                <thead>
+                                                                  <tr class="uppercase">
+                                                                    <th>公司名称</th>
+                                                                    <th>开始日期</th>
+                                                                    <th>结束日期</th>
+                                                                    <th>职务</th>
+                                                                    <th>工作描述</th>
+                                                                    <th>变动原因</th>
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>海泉集团</td>
+                                                                        <td>2017-02-03</td>
+                                                                        <td>2017-03-04</td>
+                                                                        <td>项目总监</td>
+                                                                        <td>负责项目投标工作，投标事后跟进。</td>
+                                                                        <td>
+                                                                          职位晋升
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>海泉集团</td>
+                                                                        <td>2017-02-03</td>
+                                                                        <td>2017-03-04</td>
+                                                                        <td>项目总监</td>
+                                                                        <td>负责项目投标工作，投标事后跟进。</td>
+                                                                        <td>
+                                                                          职位晋升
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                              </table>
+                                                            </div>
+                                                            <!--end profile-settings-->
+                                                            <div class="margin-top-10">
+                                                                <a href="javascript:;" class="btn blue" data-toggle="modal" data-target="#user-info-modal"> 新增经历</a>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- END PRIVACY SETTINGS TAB -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END PROFILE CONTENT -->
+                        </div>
+                    </div>
+                    <!-- 结束 第十栏目 -->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+            <a href="javascript:;" class="page-quick-sidebar-toggler">
+                <i class="icon-login"></i>
+            </a>
+
+            <!-- END QUICK SIDEBAR -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; 版权所属：
+                <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+
+        <!-- 开始 弹出草稿箱 -->
+        <div class="modal fade" id="user-info-modal" tabindex="-1" role="dialog" aria-labelledby="log-modal-draft-abel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="log-modal-draft-label">新增经历</h4>
+              </div>
+              <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form action="" class="form-horizontal">
+                                <div class="form-body">
+                                    <div class="form-group form-md-line-input">
+                                        <label class="col-md-3 control-label" for="form_control_1">
+                                            公司名称：
+                                        </label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="">
+                                            <div class="form-control-focus"> </div>
+                                            <span class="help-block">您以前的就职公司...</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-md-line-input">
+                                        <label class="col-md-3 control-label" for="form_control_1">
+                                            开始时间：
+                                        </label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="">
+                                            <div class="form-control-focus"> </div>
+                                            <span class="help-block">您入职该公司的时间...</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-md-line-input">
+                                        <label class="col-md-3 control-label" for="">
+                                            结束时间：
+                                        </label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="">
+                                            <div class="form-control-focus"> </div>
+                                            <span class="help-block">您离开该公司的时间...</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-md-line-input">
+                                        <label class="col-md-3 control-label" for="">
+                                            职务：
+                                        </label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="">
+                                            <div class="form-control-focus"> </div>
+                                            <span class="help-block">您入在该公司的职位...</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-md-line-input">
+                                        <label class="col-md-3 control-label" for="">工作描述：</label>
+                                        <div class="col-md-9">
+                                            <textarea class="form-control" name="memo" rows="2"></textarea>
+                                            <div class="form-control-focus"> </div>
+                                            <span class="help-block">您以前的就职公司...</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-md-line-input">
+                                        <label class="col-md-3 control-label" for="">变动原因：</label>
+                                        <div class="col-md-9">
+                                            <textarea class="form-control" name="memo" rows="3"></textarea>
+                                            <div class="form-control-focus"> </div>
+                                            <span class="help-block">您以前的就职公司...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary blue" data-dismiss="modal">保存</button>
+                <button type="button" class="btn btn-default grey" data-dismiss="modal">关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 结束 弹出草稿箱 -->
+
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+        <script src="../../assets/global/plugins/respond.min.js"></script>
+        <script src="../../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../../assets/global/jquery/jquery.min.js"></script>
+        <script src="../../assets/global/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+        <script src="../../assets/global/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../../assets/global/layout4/scripts/layout.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,54 @@
+.form-group.form-md-line-input .bootstrap-tagsinput{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c2cad8;
+  box-shadow: none;
+  padding: 5px 0 0 0;
+}
+.form-group.form-md-line-input .bootstrap-tagsinput .label{
+  margin: 0 5px 5px 0;
+  display: inline-block;
+}
+.form-group.form-md-line-input .bootstrap-tagsinput .label>span{
+  padding: 0 0 0 5px;
+  cursor: pointer;
+}
+.edit-people-scrollable{
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  border: #ddd solid 1px;
+  padding: 10px;
+}
+.edit-people-scrollable>h5{
+  border-bottom: #ddd solid 1px;
+  padding-bottom: 10px;
+}
+.edit-people-scrollable .bootstrap-tagsinput{
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.edit-people-scrollable::-webkit-scrollbar {
+  width: 5px;
+  height: 50px;
+}
+.edit-people-scrollable::-webkit-scrollbar-corner,
+.edit-people-scrollable::-webkit-scrollbar-track {
+  background-color: #d8d8d8;
+}
+
+.bootstrap-tagsinput .border-bottom{
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.bootstrap-tagsinput .border-bottom:hover{
+  background: #e6e6e6;
+}
+.bootstrap-tagsinput .border-bottom>span{
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}

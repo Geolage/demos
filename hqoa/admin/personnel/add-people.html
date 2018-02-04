@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>海泉集团oa管理系统</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <link rel="stylesheet" href="../../assets/global/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/global/bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" href="../../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"><!-- 时间控件 -->
+
+        <!-- 开始 下拉选择控件 -->
+        <link rel="stylesheet" href="../../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+        <!-- 结束 下拉选择控件 -->
+        <!-- 开始 全局控制模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/layout.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/light.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/default.css">
+        <link rel="stylesheet" href="../../assets/global/simple-line-icons/simple-line-icons.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/global.css">
+        <!-- 结束 全局控制模块 -->
+        <!-- 开始  树状菜单 -->
+        <link href="../../assets/global/jstree/metroStyle/metroStyle.css" rel="stylesheet" type="text/css" />
+        <!-- 结束  树状菜单 -->
+        <link rel="stylesheet" href="../../assets/layout/custom.css">
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
+
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <img src="../../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <div id="menu-left" class="pull-left">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="../index.html"><i class="icon-speedometer"></i><span>桌面</span></a>
+                        </li>
+                        <li>
+                            <a href="../flow/index.html"><i class="icon-shuffle"></i><span>流程</span></a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="icon-note"></i><span>日志</span></a>
+                        </li>
+                        <li>
+                            <a href="../notice/index.html"><i class="icon-volume-2"></i><span>通知</span></a>
+                        </li>
+                        <li>
+                            <a class="active" href="../personnel/index.html"><i class="icon-users"></i><span>人事</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form" action="page_general_search_2.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-success"> 7 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">12 pending</span> notifications</h3>
+                                        <a href="page_user_profile_1.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-success">
+                                                            <i class="fa fa-plus"></i>
+                                                        </span> New user registered. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Server #12 overloaded. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">10 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Server #2 not responding. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">14 hrs</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> Application error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">2 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Database overloaded 68%. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> A user IP blocked. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">4 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Storage Server #4 not responding dfdfdfd. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">5 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> System Error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">9 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Storage server failed. </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-danger"> 4 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>You have
+                                            <span class="bold">7 New</span> Messages</h3>
+                                        <a href="app_inbox.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">16 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Bob Nilson </span>
+                                                        <span class="time">2 hrs </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">40 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">46 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END INBOX DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- 开始 系统设置 -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-settings"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:;"> 流程设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 日志设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 通知设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 人事设置 </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;"> 系统设置 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 结束 系统设置 -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> 李振华 </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../../assets/layout/img/user-img.jpg" /> </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="user/index.html">
+                                            <i class="icon-user"></i> 个人信息 </a>
+                                    </li>
+                                    <li>
+                                        <a href="user/editPwd.html">
+                                            <i class="icon-lock"></i> 修改密码 </a>
+                                    </li>
+                                    <li>
+                                        <a href="##">
+                                            <i class="icon-logout"></i> 注销 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">人员管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start ">
+                                    <a href="index.html" class="nav-link ">
+                                        <span class="title">人员查询</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start active open">
+                                    <a href="add-people.html" class="nav-link ">
+                                        <span class="title">新建人员</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="user-info.html" class="nav-link ">
+                                        <span class="title">个人信息</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">密码设置</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">人员生日</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">组织管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">我的下属</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">组织架构</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">职位类别</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">职位级别</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">人事档案设置</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+
+                    <!-- BEGIN PAGE BREADCRUMB -->
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <a href="index.html">人事</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span class="active">新增人员</span>
+                        </li>
+                    </ul>
+                    <!-- END PAGE BASE CONTENT -->
+                    <!-- 开始 第十栏目 -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject font-blue-sharp bold uppercase">安徽海泉集团</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <ul id="treeDemo" class="ztree"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject font-blue-sharp bold uppercase">集团公司</span>
+                                        <span class="caption-helper">部门4个</span>
+                                        <span class="caption-helper">成员26个</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <!-- 开始 查询条件 -->
+                                    <form action="" method="post" id="search_form" style="padding: 0 15px;">
+                                        <div class="row form-horizontal">
+                                                <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="name">账号</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" name="name" placeholder="请输入账号" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="author">姓名</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" name="author" placeholder="请输入姓名" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="start_time">编号</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" name="start_time" placeholder="请输入编号" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="end_time">手机</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" name="end_time" placeholder="请输入手机号码" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label" for="code">性别</label>
+                                                    <div class="col-sm-8">
+                                                        <select name="enabled" class="form-control">
+                                                            <option value="">全部</option>
+                                                            <option value="true">男</option>
+                                                            <option value="false">女</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 text-right" style="border-bottom: #ddd solid 1px;margin-bottom: 15px;">
+                                                <div class="form-group">
+                                                    <button type="button" class="btn-sm btn green J_form_query">查询</button>
+                                                    <button type="button" class="btn-sm btn default J_form_reset">重置</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- 结束 查询条件 -->
+                                    <div class="clearfix"></div>
+                                    <!-- 开始 表格内容 -->
+                                    <div class="bootstrap-table"><div class="fixed-table-toolbar"><div class="bs-bars pull-left"><div id="toolbar" class="btn-group">
+                                        <button type="button" class="btn btn-default  add" id="btn_add">
+                                                <span class="glyphicon glyphicon-plus">添加</span>
+                                            </button>
+                                            <button type="button" class="btn btn-default" id="btn_remove">
+                                                <span class="glyphicon glyphicon-trash">删除</span>
+                                            </button>
+                                            <button type="button" class="btn btn-default" id="btn_edit">
+                                                <span class="glyphicon glyphicon-edit">编辑</span>
+                                            </button>
+                                            <button type="button" class="btn btn-default" id="btn_enable">
+                                                <span class="glyphicon glyphicon-ok-circle">启用</span>
+                                            </button>
+                                            <button type="button" class="btn btn-default" id="btn_disable">
+                                                <span class="glyphicon glyphicon-ban-circle">禁止</span>
+                                            </button>
+                                            <button type="button" class="btn btn-default" id="btn_setting">
+                                                <span class="glyphicon glyphicon-wrench">角色设置</span>
+                                            </button>
+                                            <button type="button" class="btn btn-default" id="btn_reset_pwd">
+                                                <span class="glyphicon glyphicon-unchecked">密码重置</span>
+                                            </button>
+                                        </div></div></div><div class="fixed-table-container" style="padding-bottom: 0px;"><div class="fixed-table-header" style="display: none;"><table></table></div><div class="fixed-table-body"><div class="fixed-table-loading" style="top: 41px; display: none;">正在努力地加载数据中，请稍候……</div><table id="table" class="table table-hover"><thead><tr><th class="bs-checkbox " style="text-align: center; vertical-align: middle; width: 36px; " data-field="id" tabindex="0"><div class="th-inner "><input name="btSelectAll" type="checkbox"></div><div class="fht-cell"></div></th><th style="" data-field="account" tabindex="0"><div class="th-inner sortable both">用户帐号</div><div class="fht-cell"></div></th><th style="" data-field="fullName" tabindex="0"><div class="th-inner sortable both">用户名称</div><div class="fht-cell"></div></th><th style="" data-field="phone" tabindex="0"><div class="th-inner sortable both">手机号</div><div class="fht-cell"></div></th><th style="" data-field="enabled" tabindex="0"><div class="th-inner sortable both">状态</div><div class="fht-cell"></div></th></tr></thead><tbody><tr data-index="0"><td class="bs-checkbox "><input data-index="0" name="checkbox_id" type="checkbox" value="admin"></td><td style="">admin</td><td style="">超级管理员</td><td style="">13670497765</td><td style="">有效</td></tr><tr data-index="1"><td class="bs-checkbox "><input data-index="1" name="checkbox_id" type="checkbox" value="123"></td><td style="">123</td><td style="">风雷站点</td><td style="">13412345678</td><td style="">有效</td></tr><tr data-index="2"><td class="bs-checkbox "><input data-index="2" name="checkbox_id" type="checkbox" value="jingsheng"></td><td style="">jingsheng</td><td style="">金盛房地产</td><td style="">13420000000</td><td style="">有效</td></tr><tr data-index="3"><td class="bs-checkbox "><input data-index="3" name="checkbox_id" type="checkbox" value="hqliangyou"></td><td style="">hqliangyou</td><td style="">海泉粮油</td><td style="">13420000001</td><td style="">有效</td></tr><tr data-index="4"><td class="bs-checkbox "><input data-index="4" name="checkbox_id" type="checkbox" value="test"></td><td style="">test</td><td style="">测试账号</td><td style="">13420000004</td><td style="">有效</td></tr></tbody></table></div><div class="fixed-table-footer" style="display: none;"><table><tbody><tr></tr></tbody></table></div><div class="fixed-table-pagination" style="display: block;"><div class="pull-left pagination-detail"><span class="pagination-info">显示第 1 到第 5 条记录，总共 5 条记录</span><span class="page-list" style="display: none;">每页显示 <span class="btn-group dropup"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="page-size">30</span> <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li><a href="javascript:void(0)">50</a></li></ul></span> 条记录</span></div><div class="pull-right pagination" style="display: none;"><ul class="pagination"><li class="page-pre"><a href="javascript:void(0)">‹</a></li><li class="page-number active"><a href="javascript:void(0)">1</a></li><li class="page-next"><a href="javascript:void(0)">›</a></li></ul></div></div></div></div>
+                                        <!-- 结束 表格内容 -->
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 结束 第十栏目 -->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+            <a href="javascript:;" class="page-quick-sidebar-toggler">
+                <i class="icon-login"></i>
+            </a>
+
+            <!-- END QUICK SIDEBAR -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; 版权所属：
+                <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+        <script src="../../assets/global/plugins/respond.min.js"></script>
+        <script src="../../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../../assets/global/jquery/jquery.min.js"></script>
+        <script src="../../assets/global/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+        <script src="../../assets/global/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../../assets/global/layout4/scripts/layout.js"></script>
+        <!-- 树状菜单 -->
+        <script src="../../assets/global/jstree/js/jquery.ztree.all.min.js"></script>
+        <script>
+            var setting = {
+            view: {
+                showIcon: showIconForTree
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                }
+            }
+        };
+
+        var zNodes =[
+            { name:"安徽海泉集团", open:true,
+                children: [
+                    { name:"集团公司",
+                        children: [
+                            { name:"顾问"},
+                            { name:"总裁办"},
+                            { name:"督查室"},
+                            { name:"财务部"}
+                        ]},
+                    { name:"鑫启源公司",
+                        children: [
+                            { name:"客服部"},
+                            { name:"总经办"},
+                            { name:"财务部"}
+                        ]},
+                    { name:"系统管理部门", isParent:true}
+                ]},
+
+        ];
+
+        function showIconForTree(treeId, treeNode) {
+            return !treeNode.isParent;
+        };
+
+        $(document).ready(function(){
+            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        });
+        </script>
+    </body>
+
+</html>

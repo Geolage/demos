@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>海泉集团oa管理系统</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <link rel="stylesheet" href="../assets/global/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/global/bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" href="../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"><!-- 时间控件 -->
+
+        <!-- 开始 下拉选择控件 -->
+        <link rel="stylesheet" href="../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+        <!-- 结束 下拉选择控件 -->
+        <!-- 开始 全局控制模块 -->
+        <link rel="stylesheet" href="../assets/global/layout4/css/layout.css">
+        <link rel="stylesheet" href="../assets/global/layout4/css/themes/light.css">
+        <link rel="stylesheet" href="../assets/global/layout4/css/themes/default.css">
+        <link rel="stylesheet" href="../assets/global/simple-line-icons/simple-line-icons.css">
+        <link rel="stylesheet" href="../assets/global/layout4/css/global.css">
+        <!-- 结束 全局控制模块 -->
+
+        <!-- 开始 4格数据统计模块 -->
+        <link rel="stylesheet" href="../assets/global/layout4/css/stats.css">
+        <!-- 结束 4格数据统计模块 -->
+
+        <link rel="stylesheet" href="../assets/layout/competence.css">
+
+        <link rel="stylesheet" href="../assets/layout/custom.css">
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
+
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <img src="../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <div id="menu-left" class="pull-left">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="active" href="index.html"><i class="icon-speedometer"></i><span>桌面</span></a>
+                        </li>
+                        <li>
+                            <a href="flow/index.html"><i class="icon-shuffle"></i><span>流程</span></a>
+                        </li>
+                        <li>
+                            <a href="log/index.html"><i class="icon-note"></i><span>日志</span></a>
+                        </li>
+                        <li>
+                            <a href="notice/index.html"><i class="icon-volume-2"></i><span>通知</span></a>
+                        </li>
+                        <li>
+                            <a href="personnel/index.html"><i class="icon-users"></i><span>人事</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form" action="page_general_search_2.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-success"> 7 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">7 条</span> 系统信息</h3>
+                                        <a href="">查看全部</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">流程</span>
+                                                    <span class="details"> 您的流程请假流程-罗伯特-2017-06-03 18:40已经完成销假环节 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">通知</span>
+                                                    <span class="details"> 关于做好2017年防汛安全工作的紧急通知 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">日志</span>
+                                                    <span class="details">您2017-06-12日的日志没有提交 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">系统</span>
+                                                    <span class="details">你的用户信息没有完成 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">流程</span>
+                                                    <span class="details">
+                                                        张三评级了你的流程“请假流程-罗伯特-2017-06-03 18:40”</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">流程</span>
+                                                    <span class="details">
+                                                        张三评级了你的流程“请假流程-罗伯特-2017-06-03 18:40”</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">流程</span>
+                                                    <span class="details">
+                                                        张三评级了你的流程“请假流程-罗伯特-2017-06-03 18:40”</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-danger"> 4 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>你有
+                                            <span class="bold">4 条</span> 邮件信息</h3>
+                                        <a href="">查看全部</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> 阿里云 </span>
+                                                        <span class="time"> 2017/06/02 14:00 </span>
+                                                    </span>
+                                                    <span class="message"> 阿里云ECS实例续费补偿通知 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> 阿里云 </span>
+                                                        <span class="time"> 2017/06/02 14:00 </span>
+                                                    </span>
+                                                    <span class="message">阿里云备案《通管局审核通过》通知 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> beian </span>
+                                                        <span class="time"> 2017/06／04 </span>
+                                                    </span>
+                                                    <span class="message"> 关于ICP备案申请审核通过的通知 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> RELINK </span>
+                                                        <span class="time"> 2017/06／04 </span>
+                                                    </span>
+                                                    <span class="message"> RELINK 用户完善帐号邮箱验证码 </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END INBOX DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- 开始 系统设置 -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-settings"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:;"> 流程设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 日志设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 通知设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 人事设置 </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;"> 系统设置 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 结束 系统设置 -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> 李振华 </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../assets/layout/img/user-img.jpg" /> </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="user/index.html">
+                                            <i class="icon-user"></i> 个人信息 </a>
+                                    </li>
+                                    <li>
+                                        <a href="user/editPwd.html">
+                                            <i class="icon-lock"></i> 修改密码 </a>
+                                    </li>
+                                    <li>
+                                        <a href="##">
+                                            <i class="icon-logout"></i> 注销 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">控制台</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start active open">
+                                    <a href="index.html" class="nav-link ">
+                                        <span class="title">桌面</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">数据统计</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item  start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-diamond"></i>
+                                <span class="title">常用操作</span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">发起流程</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">流程审批</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">日志提交</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">计划提交</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">通知公告</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+
+                    <!-- BEGIN PAGE BREADCRUMB -->
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <a href="index.html">控制台</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span class="active">桌面</span>
+                        </li>
+                    </ul>
+
+                    <div class="clearfix"></div>
+                    <!-- 结束 第九栏目 -->
+                    <!-- 开始 第十栏目 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject font-blue bold uppercase">权限菜单设置</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="portlet light portlet-fit bordered">
+                                                <div class="portlet-title">
+                                                    <div class="caption">
+                                                        <div class="select-all site-checkbox"><label class="checkbox-inline bold">
+                                                        <input type="checkbox" id="" value="option1"> 日志权限
+                                                        </label></div>
+                                                    </div>
+                                                    <div class="list-count pull-right red-mint" ole="button" data-toggle="collapse" href="#collapseQX1" aria-expanded="true" aria-controls="collapseQX1">
+                                                        <span class="arrow"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div id="collapseQX1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="padding: 0 20px 15px 20px;">
+                                                    <div class="portlet-body" style="">
+                                                        <div class="mt-element-list">
+                                                            <div class="mt-list-head list-simple">
+                                                                <div class="list-head-title-container">
+                                                                    <h3 class="list-title">
+                                                                        <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                        <input type="checkbox" id="" value="option1"> 日志管理
+                                                                        </label></div>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="list-count pull-right red-mint" ole="button" data-toggle="collapse" href="#collapseQX01" aria-expanded="true" aria-controls="collapseQX01">
+                                                                    <span class="arrow"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-collapse collapse in" id="collapseQX01">
+                                                                <div class="mt-list-container list-simple ext-1">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 我的计划
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 他人日志
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 日志统计
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="mt-element-list">
+                                                            <div class="mt-list-head list-simple">
+                                                                <div class="list-head-title-container">
+                                                                    <h3 class="list-title">
+                                                                        <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                        <input type="checkbox" id="" value="option1"> 计划管理
+                                                                        </label></div>
+                                                                    </h3>
+                                                                </div>
+                                                                <div class="list-count pull-right red-mint" ole="button" data-toggle="collapse" href="#collapseQX02" aria-expanded="true" aria-controls="collapseQX02">
+                                                                    <span class="arrow"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-collapse collapse in" id="collapseQX02">
+                                                                <div class="mt-list-container list-simple ext-1">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 我的计划
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 他人计划
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 他人计划
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="mt-element-list">
+                                                            <div class="mt-list-head list-simple">
+                                                                <div class="list-head-title-container">
+                                                                    <h3 class="list-title">
+                                                                        <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                        <input type="checkbox" id="" value="option1"> 计划管理
+                                                                        </label></div>
+                                                                    </h3>
+                                                                </div>
+
+                                                                <div class="list-count pull-right red-mint" ole="button" data-toggle="collapse" href="#collapseQX03" aria-expanded="true" aria-controls="collapseQX03">
+                                                                    <span class="arrow"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-collapse collapse in" id="collapseQX03">
+                                                                <div class="mt-list-container list-simple ext-1">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 我的计划
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 他人日志
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-6 col-xs-6">
+                                                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                                                <div class="ribbon ribbon-shadow ribbon-border-hor ribbon-clip ribbon-color-danger uppercase">
+                                                                                    <div class="ribbon-sub ribbon-clip"></div>
+                                                                                    <div class="select-all site-checkbox"><label class="checkbox-inline">
+                                                                                    <input type="checkbox" id="" value="option1"> 日志统计
+                                                                                    </label></div>
+                                                                                </div>
+                                                                                <div class="ribbon-content clearfix">
+                                                                                    <div class="competence-checkbox site-checkbox">
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 添加功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 删除功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 编辑功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option1"> 审批功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option2"> 退回功能
+                                                                                        </label>
+                                                                                        <label class="checkbox-inline">
+                                                                                            <input type="checkbox" id="" value="option3"> 查阅功能
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                        <a href="javascript:;" class="btn green">保存</a>
+                                        <a href="javascript:;" class="btn default">取消</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 结束 第十栏目 -->
+                    <!-- END PAGE BASE CONTENT -->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+            <a href="javascript:;" class="page-quick-sidebar-toggler">
+                <i class="icon-login"></i>
+            </a>
+
+            <!-- END QUICK SIDEBAR -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; 版权所属：
+                <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+        <script src="../assets/global/plugins/respond.min.js"></script>
+        <script src="../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../assets/global/jquery/jquery.min.js"></script>
+        <script src="../assets/global/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+
+
+
+    </body>
+
+</html>

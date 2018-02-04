@@ -1,0 +1,66 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: auto;
+  }
+  .print-title{
+    padding:5mm 10mm 0 10mm;
+  }
+  .print-form-box,
+  .print-msg-box{
+    padding: 0 10mm;
+    margin: 0;
+    border: none;
+  }
+  .print-form-box .p-form-title{
+    margin: 0;
+    padding: 0;
+  }
+  .print-form-box .p-info-title{
+    font-size: 18pt !important;
+  }
+  .print-form-box .form-group{
+    margin: 0;
+  }
+  .form-horizontal .form-group.form-md-line-input{
+    margin-bottom: 0;
+  }
+  .print-form-box .form-group .control-label,
+  .print-form-box .form-group .p-col-input{
+    display: inline-block;
+  }
+  .print-form-box .form-group .control-label{
+    width: 20%;
+  }
+  .print-form-box .form-group .p-col-input{
+    width: 70%;
+    text-align: left;
+  }
+  .print-msg-box .table,
+  .print-msg-box .table>thead>tr>th{
+    text-align: center;
+  }
+  .print-msg-box .table>tbody>tr>td{
+    vertical-align: middle;
+  }
+  .print-msg-box .table>thead>tr>th:nth-child(1){
+    width: 14%;
+  }
+  .print-msg-box .table>thead>tr>th:nth-child(2),
+  .print-msg-box .table>thead>tr>th:nth-child(3){
+    width: 24%;
+  }
+  .print-msg-box .table>thead>tr>th:nth-child(4),
+  .print-msg-box .table>thead>tr>th:nth-child(5){
+    width: 11.5%;
+  }
+
+  .separator-dashed{
+    display: block;
+    margin:0;
+  }
+}

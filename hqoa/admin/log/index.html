@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>海泉集团oa管理系统</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <link rel="stylesheet" href="../../assets/global/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/global/bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" href="../../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"><!-- 时间控件 -->
+
+        <!-- 开始 下拉选择控件 -->
+        <link rel="stylesheet" href="../../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+        <!-- 结束 下拉选择控件 -->
+        <!-- 开始 全局控制模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/layout.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/light.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/default.css">
+        <link rel="stylesheet" href="../../assets/global/simple-line-icons/simple-line-icons.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/global.css">
+        <!-- 结束 全局控制模块 -->
+        <!-- 开始 日志模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/log.css">
+        <!-- 结束 日志模块 -->
+        <!-- 开始 4格数据统计模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/stats.css">
+        <!-- 结束 4格数据统计模块 -->
+        <link rel="stylesheet" href="../../assets/layout/custom.css">
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
+
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <img src="../../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <div id="menu-left" class="pull-left">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="../index.html"><i class="icon-speedometer"></i><span>桌面</span></a>
+                        </li>
+                        <li>
+                            <a href="../flow/index.html"><i class="icon-shuffle"></i><span>流程</span></a>
+                        </li>
+                        <li>
+                            <a class="active" href="index.html"><i class="icon-note"></i><span>日志</span></a>
+                        </li>
+                        <li>
+                            <a href="../notice/index.html"><i class="icon-volume-2"></i><span>通知</span></a>
+                        </li>
+                        <li>
+                            <a href="../personnel/index.html"><i class="icon-users"></i><span>人事</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form" action="page_general_search_2.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-success"> 7 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">12 pending</span> notifications</h3>
+                                        <a href="page_user_profile_1.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-success">
+                                                            <i class="fa fa-plus"></i>
+                                                        </span> New user registered. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Server #12 overloaded. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">10 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Server #2 not responding. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">14 hrs</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> Application error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">2 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Database overloaded 68%. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> A user IP blocked. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">4 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Storage Server #4 not responding dfdfdfd. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">5 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> System Error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">9 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Storage server failed. </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-danger"> 4 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>You have
+                                            <span class="bold">7 New</span> Messages</h3>
+                                        <a href="app_inbox.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">16 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Bob Nilson </span>
+                                                        <span class="time">2 hrs </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">40 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">46 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END INBOX DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- 开始 系统设置 -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-settings"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:;"> 流程设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 日志设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 通知设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 人事设置 </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;"> 系统设置 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 结束 系统设置 -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> 李振华 </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../../assets/layout/img/user-img.jpg" /> </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="user/index.html">
+                                            <i class="icon-user"></i> 个人信息 </a>
+                                    </li>
+                                    <li>
+                                        <a href="user/editPwd.html">
+                                            <i class="icon-lock"></i> 修改密码 </a>
+                                    </li>
+                                    <li>
+                                        <a href="##">
+                                            <i class="icon-logout"></i> 注销 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">日志管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start active open">
+                                    <a href="index.html" class="nav-link ">
+                                        <span class="title">我的日志</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="OtherPeopleLog.html" class="nav-link ">
+                                        <span class="title">他人日志</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">日志统计</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">计划管理</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">我的计划</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">他人计划</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">计划统计</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+
+                    <!-- BEGIN PAGE BREADCRUMB -->
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <a href="index.html">日志计划</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span class="active">我的日志</span>
+                        </li>
+                    </ul>
+                    <!-- END PAGE BREADCRUMB -->
+                    <!-- 开始 填写日志 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                             <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject font-blue bold uppercase">发布日志</span><span class="caption-helper">每天的24:00前提交...</span>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="font-green" href="##" data-toggle="modal" data-target="#log-modal-draft">草稿箱</a>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <form action="" method="post" id="">
+                                        <div class="form-body">
+                                            <div class="form-group form-md-line-input has-success">
+                                                <input type="text" class="form-control" id="form_control_1_3">
+                                                <label for="form_control_1_3">日志内容时间</label>
+                                                <span class="help-block">填写您这篇日志的时间</span>
+                                            </div>
+                                            <div class="form-group form-md-line-input  has-success">
+                                                <textarea class="form-control" name="" rows="2"></textarea>
+                                                <label for="">今日完成情况</label>
+                                                <span class="help-block">填写您今日完成的内容</span>
+                                            </div>
+                                            <div class="form-group form-md-line-input  has-success">
+                                                <textarea class="form-control" name="" rows="2"></textarea>
+                                                <label for="">当日未完成情况</label>
+                                                <span class="help-block">填写您当日未完成的内容</span>
+                                            </div>
+                                            <div class="form-group form-md-line-input  has-success">
+                                                <textarea class="form-control" name="" rows="2"></textarea>
+                                                <label for="">发现问题及解决方案情况</label>
+                                                <span class="help-block">填写您发现问题及解决方案内容</span>
+                                            </div>
+                                            <div class="form-group form-md-line-input has-success">
+                                                <textarea class="form-control" name="" rows="2"></textarea>
+                                                <label for="">明日重点工作情况</label>
+                                                <span class="help-block">填写您明日重点工作内容</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group form-md-radios has-info">
+                                                      <div class="md-radio-inline">
+                                                        <div class="md-radio">
+                                                          <input type="radio" id="checkbox2_8" name="radio2" class="md-radiobtn">
+                                                          <label for="checkbox2_8">
+                                                            <span class="inc"></span>
+                                                            <span class="check"></span>
+                                                            <span class="box"></span> A </label>
+                                                        </div>
+                                                        <div class="md-radio">
+                                                          <input type="radio" id="checkbox2_9" name="radio2" class="md-radiobtn" checked="">
+                                                          <label for="checkbox2_9">
+                                                            <span class="inc"></span>
+                                                            <span class="check"></span>
+                                                            <span class="box"></span> B </label>
+                                                        </div>
+                                                        <div class="md-radio">
+                                                          <input type="radio" id="checkbox2_10" name="radio2" class="md-radiobtn">
+                                                          <label for="checkbox2_10">
+                                                            <span class="inc"></span>
+                                                            <span class="check"></span>
+                                                            <span class="box"></span> C </label>
+                                                        </div>
+                                                        <div class="md-radio">
+                                                          <input type="radio" id="checkbox2_11" name="radio2" class="md-radiobtn">
+                                                          <label for="checkbox2_11">
+                                                            <span class="inc"></span>
+                                                            <span class="check"></span>
+                                                            <span class="box"></span> C </label>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="pull-right">
+                                                        <a href="javascript:;" class="btn blue">保存草稿</a>
+                                                        <a href="javascript:;" class="btn blue">发表日志</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 结束 填写日志 -->
+                    <div class="row">
+                        <!-- 开始 日志记录 -->
+                        <div class="col-md-8">
+                            <div class="portlet light portlet-fit bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject bold font-blue uppercase"> 日志纪录</span>
+                                        <span class="caption-helper">工作点滴每天纪录...</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="timeline">
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="timeline-badge">
+                                              <div class="timeline-icon">
+                                                <i class="icon-check font-green"></i>
+                                              </div>
+                                              <p class="timeline-date font-green">4月18日</p>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <div class="timeline-body-arrow"> </div>
+                                                <div class="timeline-body-head">
+                                                    <div class="timeline-body-head-caption">
+                                                        <a href="javascript:;" class="timeline-body-title font-blue-madison">李正华</a>
+                                                        <span class="timeline-body-time font-grey-cascade">2017-06-11 19:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline-body-content">
+                                                     <div class="table-scrollable table-scrollable-borderless">
+                                                        <!-- 开始 日志内容 -->
+                                                        <table class="table table-hover table-light table-nobg">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td width="130px"> 今日完成情况： </td>
+                                                                <td> 今天有考查了三家米厂，因都有品牌，出厂价格都高于市场半价，下午回来开会讨论了工程进度监督和后勤服务，协议了关于放假的决定， </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td> 当日未完成情况： </td>
+                                                                <td> 计划完成 </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td> 发现问题及解决方案： </td>
+                                                                <td> 大米目前还没有找到合适的货源和销路，小麦销售放假之后才能发货。 </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td> 明天任务： </td>
+                                                                <td> 1.做好放假后的安全值班工程2，监督好工程进展 </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td> 自评： </td>
+                                                                <td> A </td>
+                                                              </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- 结束 日志内容 -->
+                                                        <!-- 开始 评论区域 -->
+                                                        <div class="text-right">
+                                                            <a  class="btn btn-circle btn-sm blue" data-toggle="collapse" href="#timeline-log-mag1" aria-expanded="false" aria-controls="timeline-log-mag1">
+                                                            <i class="fa fa-comment-o"></i> 评论 </a>
+                                                            <a  class="btn btn-circle btn-sm blue btn-outline" href="##">
+                                                            <i class="fa fa-heart-o"></i> 点赞 </a>
+                                                        </div>
+                                                        <div class="collapse" id="timeline-log-mag1">
+                                                          <div class="timeline-log-mag-body">
+                                                            <ul class="chats">
+                                                                <li class="in">
+                                                                    <img class="avatar" alt="" src="../../assets/layout/img/user-img.jpg">
+                                                                    <div class="message">
+                                                                        <span class="arrow"> </span>
+                                                                            <a href="javascript:;" class="name"> 李正华 </a>
+                                                                            <span class="datetime font-default"> 海泉集团    行政部 </span>
+                                                                            <span class="body">粮食收购是头等大事，要把好关。粮食收购是头等大事，要把好关。粮食收购是头等大事，要把好关。粮食收购是头等大事，要把好关。粮食收购是头等大事，要把好关。粮食收购是头等大事，要把好关。粮食收购是头等大事，要把好关。
+                                                                            <p class="font-default text-right" style="margin-bottom: 0">
+                                                                                <a href="##">回复</a>
+                                                                                发表于2017年4月27日 12:23
+                                                                            </p>
+                                                                        </span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="in">
+                                                                    <img class="avatar" alt="" src="../../assets/layout/img/user-img.jpg">
+                                                                    <div class="message">
+                                                                        <span class="arrow"> </span>
+                                                                            <a href="javascript:;" class="name"> 赵得贵 </a>
+                                                                            <span class="datetime font-default"> 海泉集团    行政部 </span>
+                                                                            <span class="body"> <span class="font-blue">回复：李正华 </span>你总说的有道理
+                                                                            <p class="font-default text-right" style="margin-bottom: 0">
+                                                                                <a href="##">回复</a>
+                                                                                发表于2017年4月27日 12:23
+                                                                            </p>
+                                                                        </span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <form action="">
+                                                                <div class="form-body">
+                                                                    <div class="form-group form-md-line-input">
+                                                                        <textarea class="form-control" name="memo" rows="3"></textarea>
+                                                                        <label for="">评论内容</label>
+                                                                        <span class="help-block">正在评论李正华的日志...</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-actions">
+                                                                  <div class="" style="padding-top: 5px;">
+                                                                        <div class="col-md-8 col-sm-8">
+                                                                            <div class="form-group form-md-radios has-info">
+                                                                            <div class="md-radio-inline">
+                                                                                <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_8_1" name="radio2_1" class="md-radiobtn">
+                                                                                    <label for="checkbox2_8_1">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> A </label>
+                                                                                </div>
+                                                                              <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_9_1" name="radio2_1" class="md-radiobtn" checked="">
+                                                                                    <label for="checkbox2_9_1">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> B </label>
+                                                                              </div>
+                                                                              <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_10_1" name="radio2_1" class="md-radiobtn">
+                                                                                    <label for="checkbox2_10_1">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> C </label>
+                                                                              </div>
+                                                                              <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_11_1" name="radio2_1" class="md-radiobtn">
+                                                                                    <label for="checkbox2_11_1">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> D </label>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                        <div class="col-md-4 col-sm-4 clearfix">
+                                                                            <div class="pull-right">
+                                                                                <a href="javascript:;" class="btn btn-sm blue">评论</a>
+                                                                            </div>
+                                                                        </div>
+                                                                  </div>
+                                                                </div>
+                                                            </form>
+                                                          </div>
+                                                        </div>
+                                                        <!-- 结束 评论区域 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END TIMELINE ITEM -->
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="timeline-badge">
+                                                <div class="timeline-icon">
+                                                    <i class="icon-clock font-red"></i>
+                                                </div>
+                                                <p class="timeline-date font-red">4月18日</p>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <div class="timeline-body-arrow"> </div>
+                                                <div class="timeline-body-head">
+                                                    <div class="timeline-body-head-caption">
+                                                        <span class="timeline-body-alerttitle font-green-haze">李正华</span>
+                                                        <span class="timeline-body-time font-grey-cascade">2017-04-18 00:03</span>
+                                                    </div>
+                                                    <div class="timeline-body-head-actions">
+                                                        <div class="btn-group dropup">
+                                                            <button class="btn btn-circle red btn-sm" type="button"> 超时提交
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline-body-content">
+                                                    <table class="table table-hover table-light table-nobg">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td width="130px"> 今日完成情况： </td>
+                                                            <td> 今天有考查了三家米厂，因都有品牌，出厂价格都高于市场半价，下午回来开会讨论了工程进度监督和后勤服务，协议了关于放假的决定， </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td> 当日未完成情况： </td>
+                                                            <td> 计划完成 </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td> 发现问题及解决方案： </td>
+                                                            <td> 大米目前还没有找到合适的货源和销路，小麦销售放假之后才能发货。 </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td> 明天任务： </td>
+                                                            <td> 1.做好放假后的安全值班工程2，监督好工程进展 </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td> 自评： </td>
+                                                            <td> A </td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- 开始 评论区域 -->
+                                                        <div class="text-right">
+                                                            <a  class="btn btn-circle btn-sm blue" data-toggle="collapse" href="#timeline-log-mag2" aria-expanded="false" aria-controls="timeline-log-mag2">
+                                                            <i class="fa fa-comment-o"></i> 评论 </a>
+                                                            <a  class="btn btn-circle btn-sm blue btn-outline" href="##">
+                                                            <i class="fa fa-heart-o"></i> 点赞 </a>
+                                                        </div>
+                                                        <div class="collapse" id="timeline-log-mag2">
+                                                          <div class="timeline-log-mag-body">
+                                                            <ul class="chats">
+                                                                <li class="in">
+                                                                    <img class="avatar" alt="" src="../../assets/layout/img/user-img.jpg">
+                                                                    <div class="message">
+                                                                        <span class="arrow"> </span>
+                                                                            <a href="javascript:;" class="name"> 李正华 </a>
+                                                                            <span class="datetime font-default"> 海泉集团    行政部 </span>
+                                                                            <span class="body">粮食收购是头等大事，要把好关。
+                                                                            <p class="font-default text-right" style="margin-bottom: 0">
+                                                                                <a href="##">回复</a>
+                                                                                发表于2017年4月27日 12:23
+                                                                            </p>
+                                                                        </span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="in">
+                                                                    <img class="avatar" alt="" src="../../assets/layout/img/user-img.jpg">
+                                                                    <div class="message">
+                                                                        <span class="arrow"> </span>
+                                                                            <a href="javascript:;" class="name"> 赵得贵 </a>
+                                                                            <span class="datetime font-default"> 海泉集团    行政部 </span>
+                                                                            <span class="body"> <span class="font-blue">回复：李正华 </span>你总说的有道理
+                                                                            <p class="font-default text-right" style="margin-bottom: 0">
+                                                                                <a href="##">回复</a>
+                                                                                发表于2017年4月27日 12:23
+                                                                            </p>
+                                                                        </span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <form action="">
+                                                                <div class="form-body">
+                                                                    <div class="form-group form-md-line-input">
+                                                                        <textarea class="form-control" name="" rows="3"></textarea>
+                                                                        <label for="">评论内容</label>
+                                                                        <span class="help-block">正在评论李正华的日志...</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-actions">
+                                                                  <div class="" style="padding-top: 5px;">
+                                                                        <div class="col-md-8 col-sm-8">
+                                                                            <div class="form-group form-md-radios has-info">
+                                                                            <div class="md-radio-inline">
+                                                                                <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_8_2" name="radio2_1" class="md-radiobtn">
+                                                                                    <label for="checkbox2_8_2">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> A </label>
+                                                                                </div>
+                                                                              <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_9_2" name="radio2_2" class="md-radiobtn" checked="">
+                                                                                    <label for="checkbox2_9_2">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> B </label>
+                                                                              </div>
+                                                                              <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_10_2" name="radio2_1" class="md-radiobtn">
+                                                                                    <label for="checkbox2_10_2">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> C </label>
+                                                                              </div>
+                                                                              <div class="md-radio">
+                                                                                    <input type="radio" id="checkbox2_11_2" name="radio2_2" class="md-radiobtn">
+                                                                                    <label for="checkbox2_11_2">
+                                                                                      <span class="inc"></span>
+                                                                                      <span class="check"></span>
+                                                                                      <span class="box"></span> D </label>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                        <div class="col-md-4 col-sm-4 clearfix">
+                                                                            <div class="pull-right">
+                                                                                <a href="javascript:;" class="btn btn-sm blue">评论</a>
+                                                                            </div>
+                                                                        </div>
+                                                                  </div>
+                                                                </div>
+                                                            </form>
+                                                          </div>
+                                                        </div>
+                                                        <!-- 结束 评论区域 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END TIMELINE ITEM -->
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="timeline-badge">
+                                                <div class="timeline-icon">
+                                                    <i class="icon-info font-yellow"></i>
+                                                </div>
+                                                <p class="timeline-date font-yellow">4月17日</p>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <div class="timeline-body-arrow"> </div>
+                                                <div class="timeline-body-head">
+                                                    <div class="timeline-body-head-caption">
+                                                        <span class="timeline-body-alerttitle font-green-haze">李正华</span>
+                                                        <span class="timeline-body-time font-grey-cascade">2017-04-18 00:03</span>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline-body-content">
+                                                    <table class="table table-hover table-light table-nobg">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td class="text-center"> <h3>您今日没有提交工作日志！</h3></td>
+                                                          </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END TIMELINE ITEM -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 结束 日志记录 -->
+                        <!-- 开始 日志信息统计 -->
+                        <div class="col-md-4">
+                            <ul class="chats">
+                              <li class="in">
+                                <img class="avatar" alt="" src="../../assets/layout/img/user-img.jpg">
+                                <div class="message">
+                                  <span class="arrow"> </span>
+                                  <a href="javascript:;" class="name"> 李正华 </a>
+                                  <span class="body"> 海泉集团    行政部    副主任  </span>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="portlet light portlet-fit bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject bold font-blue uppercase"> 提交情况</span>
+                                        <span class="caption-helper">最近七天日志统计...</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="eecharts-box">
+                                        <div id="echarts-log" style="height:250px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet light portlet-fit bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject bold font-blue uppercase"> 评价等级</span>
+                                        <span class="caption-helper">最近七天日志统计...</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="eecharts-box">
+                                        <div id="echarts-rank" style="height:350px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- END PAGE BASE CONTENT -->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+            <a href="javascript:;" class="page-quick-sidebar-toggler">
+                <i class="icon-login"></i>
+            </a>
+
+            <!-- END QUICK SIDEBAR -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; 版权所属：
+                <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+
+        <!-- 开始 弹出草稿箱 -->
+        <div class="modal fade" id="log-modal-draft" tabindex="-1" role="dialog" aria-labelledby="log-modal-draft-abel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="log-modal-draft-label">选择日志草稿</h4>
+              </div>
+              <div class="modal-body">
+                    <div class="table-scrollable">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th> 日志时间 </th>
+                                <th> 今天完成 </th>
+                                <th> 当日未完成 </th>
+                                <th> 发现问题及解决方案 </th>
+                                <th> 明日重点工作 </th>
+                                <th> 评级 </th>
+                                <th> 操作 </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td> 2017-06-01 </td>
+                                <td> 今天有考查了三家米厂，因都有品牌，出厂价格都高于市场半价，下午回来开会讨论了工程进度监督和后勤服务，协议了关于放假的决定 </td>
+                                <td> 计划完成 </td>
+                                <td> 大米目前还没有找到合适的货源和销路，小麦销售放假之后才能发货。 </td>
+                                <td>1.做好放假后的安全值班工程2，监督好工程进展</td>
+                                <td>A</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm blue">使用</button>
+                                    <button type="button" class="btn btn-primary btn-sm red">删除</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 2017-06-01 </td>
+                                <td> 今天有考查了三家米厂，因都有品牌，出厂价格都高于市场半价，下午回来开会讨论了工程进度监督和后勤服务，协议了关于放假的决定 </td>
+                                <td> 计划完成 </td>
+                                <td> 大米目前还没有找到合适的货源和销路，小麦销售放假之后才能发货。 </td>
+                                <td>1.做好放假后的安全值班工程2，监督好工程进展</td>
+                                <td>A</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm blue">使用</button>
+                                    <button type="button" class="btn btn-primary btn-sm red">删除</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 2017-06-01 </td>
+                                <td> 今天有考查了三家米厂，因都有品牌，出厂价格都高于市场半价，下午回来开会讨论了工程进度监督和后勤服务，协议了关于放假的决定 </td>
+                                <td> 计划完成 </td>
+                                <td> 大米目前还没有找到合适的货源和销路，小麦销售放假之后才能发货。 </td>
+                                <td>1.做好放假后的安全值班工程2，监督好工程进展</td>
+                                <td>A</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm blue">使用</button>
+                                    <button type="button" class="btn btn-primary btn-sm red">删除</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 2017-06-01 </td>
+                                <td> 今天有考查了三家米厂，因都有品牌，出厂价格都高于市场半价，下午回来开会讨论了工程进度监督和后勤服务，协议了关于放假的决定 </td>
+                                <td> 计划完成 </td>
+                                <td> 大米目前还没有找到合适的货源和销路，小麦销售放假之后才能发货。 </td>
+                                <td>1.做好放假后的安全值班工程2，监督好工程进展</td>
+                                <td>A</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm blue">使用</button>
+                                    <button type="button" class="btn btn-primary btn-sm red">删除</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary blue" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 结束 弹出草稿箱 -->
+
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+        <script src="../../assets/global/plugins/respond.min.js"></script>
+        <script src="../../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../../assets/global/jquery/jquery.min.js"></script>
+        <script src="../../assets/global/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+        <script src="../../assets/global/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../../assets/global/layout4/scripts/layout.js"></script>
+        <!-- 时间控件 -->
+        <script src="../../assets/global/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript">
+            $("#form_control_1_3").datetimepicker({
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                todayBtn: true,
+                pickerPosition: "bottom-left"
+            });
+        </script>
+        <!-- 数据图表 -->
+        <script src="../../assets/global/echarts/echarts.min.js"></script>
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('echarts-log'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                tooltip: {
+                    trigger: "axis",
+                    formatter: "提交时间：{c} <br> 提交日期：{b}"
+                },
+                toolbox: {
+                    show: false,
+                    feature: {
+                        mark: {
+                            show: true
+                        },
+                        dataView: {
+                            show: true,
+                            readOnly: true
+                        },
+                        magicType: {
+                            show: false,
+                            type: ["line", "bar"]
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                calculable: false,
+                xAxis: [
+                    {
+                        type: "category",
+                        boundaryGap: false,
+                        data: ["07.05", "07.06", "07.07", "07.08", "07.09", "07.10", "07.11"],
+                        axisTick: {
+                            show: false
+                        },
+                        name: "日期",
+                        nameLocation: "end"
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: "value",
+                        axisLabel: {
+                            show: false
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: "提交时间",
+                        type: "line",
+                        data: [23.23, 22.21, 22.54, 21.02, 16.22, 18.03, 18.22],
+                        tooltip: {
+                            show: false,
+                            formatter: ""
+                        }
+                    }
+                ]
+                        };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart02 = echarts.init(document.getElementById('echarts-rank'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                tooltip: {
+                    trigger: "item",
+                    formatter: "{a} <br>{b} : {c} 次<br>占比:({d}%)",
+                    show: true
+                },
+                toolbox: {
+                    show: false,
+                    feature: {
+                        mark: {
+                            show: true
+                        },
+                        dataView: {
+                            show: true,
+                            readOnly: true
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: "领导评级",
+                        type: "pie",
+                        selectedMode: "single",
+                        radius: [0, 70],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    position: "inside"
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        data: [
+                            {
+                                value: 2,
+                                name: "A评级"
+                            },
+                            {
+                                value: 3,
+                                name: "B评级"
+                            },
+                            {
+                                value: 1,
+                                name: "C评级"
+                            },
+                            {
+                                value: 1,
+                                name: "D评级"
+                            }
+                        ]
+                    },
+                    {
+                        name: "自评等级",
+                        type: "pie",
+                        radius: [100, 140],
+                        data: [
+                            {
+                                value: 3,
+                                name: "A评级"
+                            },
+                            {
+                                value: 2,
+                                name: "B评级"
+                            },
+                            {
+                                value: 1,
+                                name: "C评级"
+                            },
+                            {
+                                value: 1,
+                                name: "D评级"
+                            }
+                        ]
+                    }
+                ],
+                calculable: false
+                        };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart02.setOption(option);
+        </script>
+    </body>
+
+</html>

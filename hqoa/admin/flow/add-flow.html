@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>海泉集团oa管理系统</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <link rel="stylesheet" href="../../assets/global/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/global/bootstrap/css/bootstrap.css">
+
+        <link rel="stylesheet" href="../../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"><!-- 时间控件 -->
+
+        <!-- 开始 下拉选择控件 -->
+        <link rel="stylesheet" href="../../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+        <!-- 结束 下拉选择控件 -->
+        <!-- 开始 全局控制模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/layout.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/light.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/themes/default.css">
+        <link rel="stylesheet" href="../../assets/global/simple-line-icons/simple-line-icons.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/global.css">
+        <!-- 结束 全局控制模块 -->
+        <!-- 开始 日志模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/log.css">
+        <!-- 结束 日志模块 -->
+        <!-- 开始 4格数据统计模块 -->
+        <link rel="stylesheet" href="../../assets/global/layout4/css/stats.css">
+        <!-- 结束 4格数据统计模块 -->
+
+        <link rel="stylesheet" href="../../assets/layout/custom.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/tabs.css">
+        <link rel="stylesheet" href="../../assets/global/layout4/css/flow.css">
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
+
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <img src="../../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <div id="menu-left" class="pull-left">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="../index.html"><i class="icon-speedometer"></i><span>桌面</span></a>
+                        </li>
+                        <li>
+                            <a class="active" href="index.html"><i class="icon-shuffle"></i><span>流程</span></a>
+                        </li>
+                        <li>
+                            <a href="../log/index.html"><i class="icon-note"></i><span>日志</span></a>
+                        </li>
+                        <li>
+                            <a href="../notice/index.html"><i class="icon-volume-2"></i><span>通知</span></a>
+                        </li>
+                        <li>
+                            <a href="../personnel/index.html"><i class="icon-users"></i><span>人事</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form" action="page_general_search_2.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-success"> 7 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">12 pending</span> notifications</h3>
+                                        <a href="page_user_profile_1.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-success">
+                                                            <i class="fa fa-plus"></i>
+                                                        </span> New user registered. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Server #12 overloaded. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">10 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Server #2 not responding. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">14 hrs</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> Application error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">2 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Database overloaded 68%. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> A user IP blocked. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">4 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Storage Server #4 not responding dfdfdfd. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">5 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> System Error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">9 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Storage server failed. </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-danger"> 4 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>You have
+                                            <span class="bold">7 New</span> Messages</h3>
+                                        <a href="app_inbox.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">16 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Bob Nilson </span>
+                                                        <span class="time">2 hrs </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">40 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">46 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END INBOX DROPDOWN -->
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- 开始 系统设置 -->
+                            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-settings"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:;"> 流程设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 日志设置</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 通知设置 </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;"> 人事设置 </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="javascript:;"> 系统设置 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 结束 系统设置 -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> 李振华 </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../../assets/layout/img/user-img.jpg" /> </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="user/index.html">
+                                            <i class="icon-user"></i> 个人信息 </a>
+                                    </li>
+                                    <li>
+                                        <a href="user/editPwd.html">
+                                            <i class="icon-lock"></i> 修改密码 </a>
+                                    </li>
+                                    <li>
+                                        <a href="##">
+                                            <i class="icon-logout"></i> 注销 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">流程中心</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item start active open">
+                                    <a href="index.html" class="nav-link ">
+                                        <span class="title">待办流程</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">新建流程</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">我的请求</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">结办流程</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">委托流程</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">抄送流程</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">超时流程</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">查询流程</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">批量打印</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+
+                    <!-- BEGIN PAGE BREADCRUMB -->
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <a href="index.html">流程中心</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span class="active">待办流程</span>
+                        </li>
+                    </ul>
+                    <!-- END PAGE BREADCRUMB -->
+                    <!-- 开始 第二栏目 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject font-blue bold uppercase">发起流程</span>
+                                        <span class="caption-helper">行政流程...</span>
+                                    </div>
+
+                                    <!-- <div class="actions">
+                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                            <label class="btn blue btn-sm ">
+                                                <input type="radio" name="options" class="toggle" id="option1">发起流程</label>
+                                            <label class="btn blue btn-sm">
+                                                <input type="radio" name="options" class="toggle" id="option2">保存流程</label>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="portlet-body">
+                                    <ul class="nav nav-tabs page-body-tabs">
+                                        <li class="active">
+                                            <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">流程表单</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">流程图</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#tab_1_3" data-toggle="tab" aria-expanded="false">流程状态</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab_1_1">
+                                            <div class="fb-void">
+                                                <h3 class="font-blue text-center">请假申请</h3>
+                                                <form action="" class="custom-flow-input-border">
+                                                    <div class="form-body">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group form-md-line-input">
+                                                                    <input type="text" class="form-control " id="form_control_1" value="请假流程-杨文元-2017-08-21">
+                                                                    <label for="form_control_1">流程标题</label>
+                                                                    <span class="help-block">名称将会自动生成，用户可以自行修改...</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group form-md-line-input">
+                                                                    <input type="text" class="form-control " id="form_control_3" value="杨文元" disabled>
+                                                                    <label for="form_control_3">提交人</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group form-md-radios">
+                                                                    <label>紧急程度</label>
+                                                                    <div class="md-radio-inline">
+                                                                        <div class="md-radio">
+                                                                            <input type="radio" id="radio6" name="radio2" class="md-radiobtn">
+                                                                            <label for="radio6">
+                                                                                <span class="inc"></span>
+                                                                                <span class="check"></span>
+                                                                                <span class="box"></span> 正常 </label>
+                                                                        </div>
+                                                                        <div class="md-radio">
+                                                                            <input type="radio" id="radio7" name="radio2" class="md-radiobtn" checked="">
+                                                                            <label for="radio7">
+                                                                                <span class="inc"></span>
+                                                                                <span class="check"></span>
+                                                                                <span class="box"></span> 紧急 </label>
+                                                                        </div>
+                                                                        <div class="md-radio">
+                                                                            <input type="radio" id="radio8" name="radio2" class="md-radiobtn">
+                                                                            <label for="radio8">
+                                                                                <span></span>
+                                                                                <span class="check"></span>
+                                                                                <span class="box"></span> 重要 </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <form id="rendered-form-void" class="form-horizontal custom-flow-input-border"><div class="fb-text form-group field-qingjia form-md-line-input"><label for="qingjia" class="fb-text-label col-md-2 control-label">请假原因<span class="fb-required">*</span><span class="tooltip-element" tooltip="请输入请假原因">?</span></label><div class="col-md-10"><input type="text" class="form-control" name="qingjia" id="qingjia" title="请输入请假原因" required="required" aria-required="true"><div class="form-control-focus"></div></div></div><div class="fb-radio-group form-group field-radio-group-1503046816057 form-md-line-input"><label for="radio-group-1503046816057" class="fb-radio-group-label col-md-2 control-label">请假类型<span class="fb-required">*</span></label><div class="col-md-10"><div class="radio-group"><div class="radio-inline"><label for="radio-group-1503046816057-0"><input name="radio-group-1503046816057" id="radio-group-1503046816057-0" required="required" aria-required="true" value="1" type="radio" checked="checked">婚假</label></div><div class="radio-inline"><label for="radio-group-1503046816057-1"><input name="radio-group-1503046816057" id="radio-group-1503046816057-1" required="required" aria-required="true" value="2" type="radio">事假</label></div><div class="radio-inline"><label for="radio-group-1503046816057-2"><input name="radio-group-1503046816057" id="radio-group-1503046816057-2" required="required" aria-required="true" value="3" type="radio">病假</label></div></div><div class="form-control-focus"></div></div></div><div class="fb-date form-group field-start_time form-md-line-input"><label for="start_time" class="fb-date-label col-md-2 control-label">开始假期时间<span class="fb-required">*</span><span class="tooltip-element" tooltip="开始假期时间">?</span></label><div class="col-md-10"><input type="date" class="form-control" name="start_time" id="start_time" title="开始假期时间" required="required" aria-required="true"><div class="form-control-focus"></div></div></div><div class="fb-date form-group field-end_time form-md-line-input"><label for="end_time" class="fb-date-label col-md-2 control-label">结事假期时间<span class="fb-required">*</span><span class="tooltip-element" tooltip="结事假期时间">?</span></label><div class="col-md-10"><input type="date" class="form-control" name="end_time" id="end_time" title="结事假期时间" required="required" aria-required="true"><div class="form-control-focus"></div></div></div></form>
+                                            </div>
+                                            <div>
+                                                <h3>审核意见</h3>
+                                                <hr>
+                                                <textarea type="textarea" placeholder="输入合同签订的事项" class="form-control" name="textarea-1503047241844" id="textarea-1503047241844"></textarea>
+                                            </div>
+                                            <div>
+                                                <h3>自定义流程（可选）</h3>
+                                                <hr>
+                                                <div class="custom-flow-box">
+                                                    <div class="custom-flow-user">
+                                                        <table class="table table-hover table-light text-center">
+                                                            <thead>
+                                                              <tr class="uppercase">
+                                                                <th class="text-center" width="60%"><h4 class="font-blue">流程图 <small class="font-grey">点击图像更换人员</small></h4> </th>
+                                                                <th class="text-center"> <h4 class="font-blue">环节</h4></th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr class="text-center">
+                                                                <td>
+                                                                    <div class="custom-user-items">
+                                                                        <a href=""><img src="../../assets/layout/img/user-img.jpg" alt=""></a>
+                                                                        <p>张家界·部门经理</p>
+                                                                    </div>
+                                                                 </td>
+                                                                <td>
+                                                                    <p>发起人</p>
+                                                                </td>
+                                                              </tr>
+                                                              <tr class="text-center">
+                                                                <td>
+                                                                    <div class="custom-user-items">
+                                                                        <p class="flow-icon"><span class="fa fa-angle-double-down"></span></p>
+                                                                        <a href=""><img src="../../assets/layout/img/user-img.jpg" alt=""></a>
+                                                                        <p>张家界·部门经理</p>
+                                                                    </div>
+                                                                    <div class="custom-user-items">
+                                                                        <p class="flow-icon"><span class="fa fa-angle-double-down"></span></p>
+                                                                        <a href=""><img src="../../assets/layout/img/user-img.jpg" alt=""></a>
+                                                                        <p>张家界·部门经理</p>
+                                                                    </div>
+                                                                 </td>
+                                                                <td>
+                                                                    <p>会签</p>
+                                                                </td>
+                                                              </tr>
+                                                              <tr class="text-center">
+                                                                <td>
+                                                                    <div class="custom-user-items">
+                                                                        <p class="flow-icon"><span class="fa fa-angle-double-down"></span></p>
+                                                                        <a href=""><img src="../../assets/layout/img/user-img.jpg" alt=""></a>
+                                                                        <p>张家界·部门经理</p>
+                                                                    </div>
+                                                                    <div class="custom-user-items">
+                                                                        <p class="flow-icon"><span class="fa fa-angle-double-down"></span></p>
+                                                                        <a href=""><img src="../../assets/layout/img/user-img.jpg" alt=""></a>
+                                                                        <p>张家界·部门经理</p>
+                                                                    </div>
+                                                                    <div class="custom-user-items">
+                                                                        <p class="flow-icon"><span class="fa fa-angle-double-down"></span></p>
+                                                                        <a href="">+</a>
+                                                                        <p>添加人员</p>
+                                                                    </div>
+                                                                 </td>
+                                                                <td>
+                                                                    <p>会签</p>
+                                                                </td>
+                                                              </tr>
+                                                              <tr class="text-center">
+                                                                <td>
+                                                                    <div class="custom-user-items">
+                                                                        <p class="flow-icon"><span class="fa fa-angle-double-down"></span></p>
+                                                                        <a href=""><img src="../../assets/layout/img/user-img.jpg" alt=""></a>
+                                                                        <p>张家界·部门经理</p>
+                                                                    </div>
+                                                                 </td>
+                                                                <td>
+                                                                    <p>董事长审批</p>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab_1_2">
+                                            <br>
+                                            <div class="text-center">
+                                                <img src="http://oqwbfdj0m.bkt.clouddn.com/FgLg1LYYS49JuaBC0M2Zox7GRU5s" alt="" width="100%">
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab_1_3">
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="dashboard-stat blue">
+                                                        <div class="visual">
+                                                            <i class="fa fa-users"></i>
+                                                        </div>
+                                                        <div class="details">
+                                                            <div class="number">
+                                                                <span>3</span>
+                                                            </div>
+                                                            <div class="desc"> 总人次 </div>
+                                                        </div>
+                                                        <a class="more" href="javascript:;"> 点击查看
+                                                            <i class="m-icon-swapright m-icon-white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="dashboard-stat red">
+                                                        <div class="visual">
+                                                            <i class="fa fa-check-square"></i>
+                                                        </div>
+                                                        <div class="details">
+                                                            <div class="number">
+                                                                <span>2</span> </div>
+                                                            <div class="desc"> 已提交 </div>
+                                                        </div>
+                                                        <a class="more" href="javascript:;"> 点击查看
+                                                            <i class="m-icon-swapright m-icon-white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="dashboard-stat green">
+                                                        <div class="visual">
+                                                            <i class="fa fa-warning"></i>
+                                                        </div>
+                                                        <div class="details">
+                                                            <div class="number">
+                                                                <span>1</span>
+                                                            </div>
+                                                            <div class="desc"> 未提交 </div>
+                                                        </div>
+                                                        <a class="more" href="javascript:;"> 点击查看
+                                                            <i class="m-icon-swapright m-icon-white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="dashboard-stat purple">
+                                                        <div class="visual">
+                                                            <i class="fa fa-eye-slash"></i>
+                                                        </div>
+                                                        <div class="details">
+                                                            <div class="number">
+                                                                <span>0</span></div>
+                                                            <div class="desc"> 未查看 </div>
+                                                        </div>
+                                                        <a class="more" href="javascript:;"> 点击查看
+                                                            <i class="m-icon-swapright m-icon-white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="table-scrollable">
+                                              <table class="table table-bordered table-hover">
+                                                <thead>
+                                                  <tr>
+                                                    <th> # </th>
+                                                    <th> 操作人 </th>
+                                                    <th> 操作状态 </th>
+                                                    <th> 接收时间 </th>
+                                                    <th> 操作时间 </th>
+                                                    <th> 操作耗时 </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td> 1 </td>
+                                                    <td> 操作人 </td>
+                                                    <td> 操作状态 </td>
+                                                    <td> 接收时间 </td>
+                                                    <td> 操作时间 </td>
+                                                    <td> 操作耗时 </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 margin-top-20">
+                                            <a class="btn blue btn-sm " href="">发起流程</a>
+                                            <a class="btn blue btn-sm " href="">保存流程</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- END PAGE BASE CONTENT -->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+            <a href="javascript:;" class="page-quick-sidebar-toggler">
+                <i class="icon-login"></i>
+            </a>
+
+            <!-- END QUICK SIDEBAR -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; 版权所属：
+                <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+        <script src="../../assets/global/plugins/respond.min.js"></script>
+        <script src="../../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../../assets/global/jquery/jquery.min.js"></script>
+        <script src="../../assets/global/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+        <script src="../../assets/global/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../../assets/global/layout4/scripts/layout.js"></script>
+        <!-- 树状菜单 -->
+    </body>
+
+</html>

@@ -1,0 +1,58 @@
+.mt-element-step{
+  margin-bottom: 15px;
+}
+.mt-element-step .row {
+    margin: 0;
+}
+.mt-element-step .step-default .mt-step-col {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.mt-element-step .step-default .active {
+    background-color: #f1f4fb!important;
+}
+
+.mt-element-step .step-default .active .mt-step-content,
+.mt-element-step .step-default .active .mt-step-title {
+    color: #333!important;
+}
+.mt-element-step .step-default .mt-step-title {
+    font-size: 24px;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mt-element-step .step-default .active .mt-step-content{
+    color: #666!important;
+    font-weight: 300;
+    width: 100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-height: 20px;
+}
+.bg-hover-white:hover, .bg-white {
+    background: #fff!important;
+}
+
+.note {
+    margin: 0 0 20px;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+    border-radius: 0 4px 4px 0;
+}
+.note h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.note.note-info {
+    background-color: #f5f8fd;
+    border-color: #8bb4e7;
+    color: #010407;
+}

@@ -1,0 +1,14 @@
+.page-body-tabs.nav-tabs > li > a {
+    margin: 0;
+    padding: 12px 13px 13px 13px;
+    font-size: 13px;
+    color: #666;
+}
+.page-body-tabs.nav-tabs > li.active > a {
+    color: #3598dc !important;
+    font-weight: 600;
+    border: none;
+    border-bottom: #3598dc solid 3px !important;
+    margin: 0;
+    background: none;
+}

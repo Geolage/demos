@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+  <meta charset="utf-8" />
+  <title>海泉集团oa管理系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <link rel="stylesheet" href="../assets/global/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/global/bootstrap/css/bootstrap.css">
+
+  <link rel="stylesheet" href="../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+  <!-- 时间控件 -->
+
+  <!-- 开始 下拉选择控件 -->
+  <link rel="stylesheet" href="../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+  <!-- 结束 下拉选择控件 -->
+  <!-- 开始 全局控制模块 -->
+  <link rel="stylesheet" href="../assets/global/layout4/css/layout.css">
+  <link rel="stylesheet" href="../assets/global/layout4/css/themes/light.css">
+  <link rel="stylesheet" href="../assets/global/layout4/css/themes/default.css">
+  <link rel="stylesheet" href="../assets/global/simple-line-icons/simple-line-icons.css">
+  <link rel="stylesheet" href="../assets/global/layout4/css/global.css">
+  <!-- 结束 全局控制模块 -->
+  <!-- 开始 4格数据统计模块 -->
+  <link rel="stylesheet" href="../assets/global/layout4/css/stats.css">
+  <!-- 结束 4格数据统计模块 -->
+
+  <link rel="stylesheet" href="../assets/layout/custom.css">
+  <link rel="stylesheet" href="../assets/layout/print-preview.css">
+  <link rel="shortcut icon" href="favicon.ico" /> </head>
+<!-- END HEAD -->
+
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+  <!-- BEGIN HEADER -->
+  <div class="page-header navbar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner ">
+      <!-- BEGIN LOGO -->
+      <div class="page-logo">
+        <a href="index.html">
+          <img src="../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+        <div class="menu-toggler sidebar-toggler">
+          <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+        </div>
+      </div>
+      <!-- END LOGO -->
+      <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+      <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+      <!-- END RESPONSIVE MENU TOGGLER -->
+      <div id="menu-left" class="pull-left">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="active" href="index.html">
+              <i class="icon-speedometer"></i>
+              <span>桌面</span>
+            </a>
+          </li>
+          <li>
+            <a href="flow/index.html">
+              <i class="icon-shuffle"></i>
+              <span>流程</span>
+            </a>
+          </li>
+          <li>
+            <a href="log/index.html">
+              <i class="icon-note"></i>
+              <span>日志</span>
+            </a>
+          </li>
+          <li>
+            <a href="notice/index.html">
+              <i class="icon-volume-2"></i>
+              <span>通知</span>
+            </a>
+          </li>
+          <li>
+            <a href="personnel/index.html">
+              <i class="icon-users"></i>
+              <span>人事</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- BEGIN PAGE TOP -->
+      <div class="page-top">
+        <!-- BEGIN HEADER SEARCH BOX -->
+        <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+        <form class="search-form" action="page_general_search_2.html" method="GET">
+          <div class="input-group">
+            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+            <span class="input-group-btn">
+              <a href="javascript:;" class="btn submit">
+                <i class="icon-magnifier"></i>
+              </a>
+            </span>
+          </div>
+        </form>
+        <!-- END HEADER SEARCH BOX -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div class="top-menu">
+          <ul class="nav navbar-nav pull-right">
+            <li class="separator hide"> </li>
+            <!-- BEGIN NOTIFICATION DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <i class="icon-bell"></i>
+                <span class="badge badge-success"> 7 </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="external">
+                  <h3>
+                    <span class="bold">12 pending</span> notifications</h3>
+                  <a href="page_user_profile_1.html">view all</a>
+                </li>
+                <li>
+                  <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">just now</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-success">
+                            <i class="fa fa-plus"></i>
+                          </span> New user registered. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">3 mins</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-danger">
+                            <i class="fa fa-bolt"></i>
+                          </span> Server #12 overloaded. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">10 mins</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-warning">
+                            <i class="fa fa-bell-o"></i>
+                          </span> Server #2 not responding. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">14 hrs</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-info">
+                            <i class="fa fa-bullhorn"></i>
+                          </span> Application error. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">2 days</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-danger">
+                            <i class="fa fa-bolt"></i>
+                          </span> Database overloaded 68%. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">3 days</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-danger">
+                            <i class="fa fa-bolt"></i>
+                          </span> A user IP blocked. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">4 days</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-warning">
+                            <i class="fa fa-bell-o"></i>
+                          </span> Storage Server #4 not responding dfdfdfd. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">5 days</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-info">
+                            <i class="fa fa-bullhorn"></i>
+                          </span> System Error. </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="time">9 days</span>
+                        <span class="details">
+                          <span class="label label-sm label-icon label-danger">
+                            <i class="fa fa-bolt"></i>
+                          </span> Storage server failed. </span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <!-- END NOTIFICATION DROPDOWN -->
+            <li class="separator hide"> </li>
+            <!-- BEGIN INBOX DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <i class="icon-envelope-open"></i>
+                <span class="badge badge-danger"> 4 </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="external">
+                  <h3>You have
+                    <span class="bold">7 New</span> Messages</h3>
+                  <a href="app_inbox.html">view all</a>
+                </li>
+                <li>
+                  <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                    <li>
+                      <a href="#">
+                        <span class="photo">
+                          <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                        <span class="subject">
+                          <span class="from"> Lisa Wong </span>
+                          <span class="time">Just Now </span>
+                        </span>
+                        <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="photo">
+                          <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                        <span class="subject">
+                          <span class="from"> Richard Doe </span>
+                          <span class="time">16 mins </span>
+                        </span>
+                        <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="photo">
+                          <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                        <span class="subject">
+                          <span class="from"> Bob Nilson </span>
+                          <span class="time">2 hrs </span>
+                        </span>
+                        <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="photo">
+                          <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                        <span class="subject">
+                          <span class="from"> Lisa Wong </span>
+                          <span class="time">40 mins </span>
+                        </span>
+                        <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="photo">
+                          <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                        <span class="subject">
+                          <span class="from"> Richard Doe </span>
+                          <span class="time">46 mins </span>
+                        </span>
+                        <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <!-- END INBOX DROPDOWN -->
+            <li class="separator hide"> </li>
+            <!-- BEGIN USER LOGIN DROPDOWN -->
+            <!-- 开始 系统设置 -->
+            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <i class="icon-settings"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-default">
+                <li>
+                  <a href="javascript:;"> 流程设置 </a>
+                </li>
+                <li>
+                  <a href="javascript:;"> 日志设置</a>
+                </li>
+                <li>
+                  <a href="javascript:;"> 通知设置 </a>
+                </li>
+                <li>
+                  <a href="javascript:;"> 人事设置 </a>
+                </li>
+                <li class="divider"> </li>
+                <li>
+                  <a href="javascript:;"> 系统设置 </a>
+                </li>
+              </ul>
+            </li>
+            <!-- 结束 系统设置 -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-user dropdown-dark">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <span class="username username-hide-on-mobile"> 李振华 </span>
+                <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                <img alt="" class="img-circle" src="../assets/layout/img/user-img.jpg" /> </a>
+              <ul class="dropdown-menu dropdown-menu-default">
+                <li>
+                  <a href="user/index.html">
+                    <i class="icon-user"></i> 个人信息 </a>
+                </li>
+                <li>
+                  <a href="user/editPwd.html">
+                    <i class="icon-lock"></i> 修改密码 </a>
+                </li>
+                <li>
+                  <a href="##">
+                    <i class="icon-logout"></i> 注销 </a>
+                </li>
+              </ul>
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+          </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+      </div>
+      <!-- END PAGE TOP -->
+    </div>
+    <!-- END HEADER INNER -->
+  </div>
+  <!-- END HEADER -->
+  <!-- BEGIN HEADER & CONTENT DIVIDER -->
+  <div class="clearfix"> </div>
+  <!-- END HEADER & CONTENT DIVIDER -->
+  <!-- BEGIN CONTAINER -->
+  <div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+      <!-- BEGIN SIDEBAR -->
+      <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+      <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+      <div class="page-sidebar navbar-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+        <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+          <li class="nav-item start active open">
+            <a href="javascript:;" class="nav-link nav-toggle">
+              <i class="icon-home"></i>
+              <span class="title">控制台</span>
+              <span class="selected"></span>
+              <span class="arrow open"></span>
+            </a>
+            <ul class="sub-menu">
+              <li class="nav-item start active open">
+                <a href="index.html" class="nav-link ">
+                  <span class="title">桌面</span>
+                  <span class="selected"></span>
+                </a>
+              </li>
+              <li class="nav-item start ">
+                <a href="#" class="nav-link ">
+                  <span class="title">数据统计</span>
+                  <span class="badge badge-danger">5</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item  start active open">
+            <a href="javascript:;" class="nav-link nav-toggle">
+              <i class="icon-diamond"></i>
+              <span class="title">常用操作</span>
+              <span class="arrow open"></span>
+            </a>
+            <ul class="sub-menu">
+              <li class="nav-item  ">
+                <a href="" class="nav-link ">
+                  <span class="title">发起流程</span>
+                </a>
+              </li>
+              <li class="nav-item  ">
+                <a href="" class="nav-link ">
+                  <span class="title">流程审批</span>
+                </a>
+              </li>
+              <li class="nav-item  ">
+                <a href="" class="nav-link ">
+                  <span class="title">日志提交</span>
+                </a>
+              </li>
+              <li class="nav-item  ">
+                <a href="" class="nav-link ">
+                  <span class="title">计划提交</span>
+                </a>
+              </li>
+              <li class="nav-item  ">
+                <a href="" class="nav-link ">
+                  <span class="title">通知公告</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- END SIDEBAR MENU -->
+      </div>
+      <!-- END SIDEBAR -->
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+      <!-- BEGIN CONTENT BODY -->
+      <div class="page-content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="portlet light bordered">
+              <div class="portlet-title">
+                <div class="caption">
+                  <span class="caption-subject font-blue bold uppercase">打印预览</span>
+                </div>
+                <div class="actions">
+                  <a class="btn blue btn-circle btn-sm btn-print pull-right no-print" style="margin-right: 5px"> 打印
+                    <i class="fa fa-print" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div id="print-page" class="portlet-body">
+                <h4 class="print-title">流程信息</h4>
+                <div class="print-form-box">
+                  <div class="tab-pane active">
+                    <form class="fb-void" id="J_form_build">
+                      <h3 class="text-center font-blue p-form-title">请假表单002
+                      </h3>
+                      <div id="rendered-form-void" class="form-horizontal ">
+                        <h2 id="control-2253341" class="p-info-title">流程基本信息</h2>
+                        <div class="fb-text form-group field-requestname form-md-line-input">
+                          <label for="requestname" class="fb-text-label col-md-2 control-label">流程标题
+                            <span class="fb-required">*</span>
+                          </label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="requestname" readonly="readonly" value="请假流程-李  岩-2017-12-12" id="requestname"
+                              validate="{require:true}" aria-required="true">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-requestman form-md-line-input">
+                          <label for="requestman" class="fb-text-label col-md-2 control-label">提交人
+                            <span class="fb-required">*</span>
+                          </label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" placeholder="请输入请假原因" class="form-control" name="requestman" readonly="readonly" value="李  岩" id="requestman"
+                              validate="{require:true}" aria-required="true">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-qingjia_type form-md-line-input">
+                          <label for="qingjia_type" class="fb-text-label col-md-2 control-label">请假类型</label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="qingjia_type" readonly="readonly" value="事假" id="qingjia_type">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-tianshu form-md-line-input">
+                          <label for="tianshu" class="fb-text-label col-md-2 control-label">请假天数</label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="tianshu" readonly="readonly" value="3" id="tianshu">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-start_time form-md-line-input">
+                          <label for="start_time" class="fb-text-label col-md-2 control-label">开始时间</label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="start_time" readonly="readonly" value="2017-12-12" id="start_time">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-shijianduan form-md-line-input">
+                          <label for="shijianduan" class="fb-text-label col-md-2 control-label">开始时间段</label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="shijianduan" readonly="readonly" value="上午" id="shijianduan">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-end_time form-md-line-input">
+                          <label for="end_time" class="fb-text-label col-md-2 control-label">结束时间</label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="end_time" readonly="readonly" value="2017-12-14" id="end_time">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-jieshushijianduan form-md-line-input">
+                          <label for="jieshushijianduan" class="fb-text-label col-md-2 control-label">结束时间段</label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="jieshushijianduan" readonly="readonly" value="上午" id="jieshushijianduan">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-text form-group field-qingjiayuanyin form-md-line-input">
+                          <label for="qingjiayuanyin" class="fb-text-label col-md-2 control-label">请假原因</label>
+                          <div class="col-md-9 p-col-input">
+                            <input type="text" class="form-control" name="qingjiayuanyin" readonly="readonly" value="朋友结婚" id="qingjiayuanyin">
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                        <div class="fb-radio-group form-group field-shenpiyijian01 form-md-line-input">
+                          <label for="shenpiyijian01" class="fb-radio-group-label col-md-2 control-label">审批意见</label>
+                          <div class="col-md-9 p-col-input">
+                            <div class="radio-group">
+                              <div class="radio-inline">
+                                <label for="shenpiyijian01-0">
+                                  <input name="shenpiyijian01" id="shenpiyijian01-0" value="1" type="radio" checked="checked" disabled="disabled">同意</label>
+                              </div>
+                              <div class="radio-inline">
+                                <label for="shenpiyijian01-1">
+                                  <input name="shenpiyijian01" id="shenpiyijian01-1" value="2" type="radio" disabled="disabled">不同意</label>
+                              </div>
+                            </div>
+                            <div class="form-control-focus"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="separator-dashed"></div>
+                <h4 class="print-title">会签意见</h4>
+                <div class="print-msg-box">
+                  <div class="table-scrollable">
+                    <table class="table table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th>名称</th>
+                          <th>接收时间</th>
+                          <th>操作时间</th>
+                          <th>操作人</th>
+                          <th>状态</th>
+                          <th>意见</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>填写表单</td>
+                          <td>2017-12-12 21:32:07</td>
+                          <td>2017-12-12 21:32:07 </td>
+                          <td>李 岩
+                          </td>
+                          <td>提交</td>
+                          <td></td>
+                        </tr>
+
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <td>部门负责人</td>
+                          <td>2017-12-12 21:32:07</td>
+                          <td>2017-12-13 17:44:53 </td>
+                          <td>李振华
+                          </td>
+                          <td>完成</td>
+                          <td>早去早回，别耽误工作</td>
+                        </tr>
+
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <td>单位负责人</td>
+                          <td>2017-12-13 17:44:53</td>
+                          <td></td>
+                          <td>李振华
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
+    <!-- BEGIN QUICK SIDEBAR -->
+    <a href="javascript:;" class="page-quick-sidebar-toggler">
+      <i class="icon-login"></i>
+    </a>
+
+    <!-- END QUICK SIDEBAR -->
+  </div>
+  <!-- END CONTAINER -->
+  <!-- BEGIN FOOTER -->
+  <div class="page-footer">
+    <div class="page-footer-inner"> 2014 &copy; 版权所属：
+      <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+    </div>
+    <div class="scroll-to-top">
+      <i class="icon-arrow-up"></i>
+    </div>
+  </div>
+  <!-- END FOOTER -->
+  <!--[if lt IE 9]>
+        <script src="../assets/global/plugins/respond.min.js"></script>
+        <script src="../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+  <script src="../assets/global/jquery/jquery.min.js"></script>
+  <script src="../assets/global/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+  <script src="../assets/global/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="../assets/global/jquery-print/jQuery.print.js"></script>
+  <script src="../assets/global/layout4/scripts/layout.js"></script>
+  <script>
+    $('.page-content').on('click', '.btn-print', function () {
+      $("#print-page").print({
+        stylesheet: '../assets/layout/print.css',
+        noPrintSelector: ".no-print"
+      });
+    })
+  </script>
+</body>
+
+</html>

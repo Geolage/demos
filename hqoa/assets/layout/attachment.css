@@ -1,0 +1,18 @@
+.form-group .attachment-list {
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  max-width: 500px;
+}
+.form-group .attachment-list>li {
+  padding: 0;
+  margin: 0 20px 20px 0;
+  padding: 0;
+}
+
+.form-group .attachment-list>li .atta-img{
+  width:80px;
+  height:80px;
+  display:inline-block;
+  overflow:hidden
+}

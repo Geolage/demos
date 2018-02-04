@@ -1,0 +1,120 @@
+.uppercase {
+    text-transform: uppercase!important;
+}
+.nav.pull-right>li>.dropdown-menu, .nav>li>.dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+}
+.badge-danger {
+    background-color: #ed6b75;
+}
+.form-control {
+    outline: 0!important;
+}
+
+.btn, .form-control {
+	outline:none;
+    box-shadow: none!important;
+}
+
+/* 导航菜单样式 */
+#menu-left{}
+#menu-left li{
+  height: 75px;
+  padding-left: 10px;
+  display: inline-block;
+}
+#menu-left li a{
+    padding: 27px 10px 27px 10px;
+    margin: 0;
+    color: #aeb2c4;
+}
+#menu-left li a:hover {
+    background-color: #3f4457;
+}
+#menu-left li a>i{
+  padding-right: 5px;
+}
+#menu-left li a.active {
+  background-color: #3f4457;
+}
+
+@media (min-width: 320px) and (max-width: 740px){
+  #menu-left{
+    width: 100%;
+    background: #3b3f51;
+  }
+  #menu-left li a{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+  }
+  .navbar-nav{
+    margin: 0;
+    text-align: center;
+  }
+  #menu-left li a>i{
+  padding-right: 0px;
+}
+}
+@media (max-width: 640px){
+  #menu-left li a>span{
+    display: none;
+  }
+}
+@media (max-width: 1100px){
+  .page-header-fixed .page-container {
+      margin-top: 155px;
+  }
+  .page-header.navbar {
+    border-bottom: 1px solid #41465a;
+  }
+    .page-header.navbar .page-top {
+      padding: 0;
+      display: block;
+      clear: both;
+      width: 100%;
+      background: #3b3f51;
+  }
+  .page-header.navbar .page-top .top-menu{
+    float: right;
+  }
+  .page-header.navbar .search-form{
+    float: left;
+    margin-top: 22px;
+    margin-left: 10px;
+  }
+
+}
+#header_inbox_sting .dropdown-menu{
+  width: 90px;
+  min-width: 90px;
+}
+
+@media (max-width: 767px){
+  #header_inbox_sting  .dropdown-menu {
+    margin-right: 0;
+}
+    #header_inbox_sting .dropdown-menu:after, #header_inbox_sting .dropdown-menu:before {
+      margin-right: 0;
+  }
+}
+
+
+/* 日志模块 */
+.timeline-item .timeline-badge .timeline-date{
+    margin-right: -30px;
+    text-align: center;
+    margin-top: 10px;
+}
+.timeline-log-mag-body{
+  padding: 10px 0;
+}
+/* table 样式追加 */
+.table-nobg{
+  background: none !important;
+}
+
+.eecharts-box{
+  overflow: auto;
+}

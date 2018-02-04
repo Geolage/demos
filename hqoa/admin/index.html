@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>海泉集团oa管理系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="stylesheet" href="../assets/global/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/global/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../assets/global/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <!-- 时间控件 -->
+
+    <!-- 开始 下拉选择控件 -->
+    <link rel="stylesheet" href="../assets/global/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- 结束 下拉选择控件 -->
+    <!-- 开始 全局控制模块 -->
+    <link rel="stylesheet" href="../assets/global/layout4/css/layout.css">
+    <link rel="stylesheet" href="../assets/global/layout4/css/themes/light.css">
+    <link rel="stylesheet" href="../assets/global/layout4/css/themes/default.css">
+    <link rel="stylesheet" href="../assets/global/simple-line-icons/simple-line-icons.css">
+    <link rel="stylesheet" href="../assets/global/layout4/css/global.css">
+    <!-- 结束 全局控制模块 -->
+    <!-- 开始 4格数据统计模块 -->
+    <link rel="stylesheet" href="../assets/global/layout4/css/stats.css">
+    <!-- 结束 4格数据统计模块 -->
+
+    <link rel="stylesheet" href="../assets/layout/custom.css">
+    <link rel="shortcut icon" href="favicon.ico" /> </head>
+<!-- END HEAD -->
+
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="index.html">
+                    <img src="../assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                <div class="menu-toggler sidebar-toggler">
+                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                </div>
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <div id="menu-left" class="pull-left">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="active" href="index.html">
+                            <i class="icon-speedometer"></i>
+                            <span>桌面</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="flow/index.html">
+                            <i class="icon-shuffle"></i>
+                            <span>流程</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="log/index.html">
+                            <i class="icon-note"></i>
+                            <span>日志</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notice/index.html">
+                            <i class="icon-volume-2"></i>
+                            <span>通知</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personnel/index.html">
+                            <i class="icon-users"></i>
+                            <span>人事</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- BEGIN PAGE TOP -->
+            <div class="page-top">
+                <!-- BEGIN HEADER SEARCH BOX -->
+                <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                <form class="search-form" action="page_general_search_2.html" method="GET">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+                        <span class="input-group-btn">
+                            <a href="javascript:;" class="btn submit">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </span>
+                    </div>
+                </form>
+                <!-- END HEADER SEARCH BOX -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="separator hide"> </li>
+                        <!-- BEGIN NOTIFICATION DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <i class="icon-bell"></i>
+                                <span class="badge badge-success"> 7 </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="external">
+                                    <h3>
+                                        <span class="bold">12 pending</span> notifications</h3>
+                                    <a href="page_user_profile_1.html">view all</a>
+                                </li>
+                                <li>
+                                    <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">just now</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-success">
+                                                        <i class="fa fa-plus"></i>
+                                                    </span> New user registered. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">3 mins</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-danger">
+                                                        <i class="fa fa-bolt"></i>
+                                                    </span> Server #12 overloaded. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">10 mins</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-warning">
+                                                        <i class="fa fa-bell-o"></i>
+                                                    </span> Server #2 not responding. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">14 hrs</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-info">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </span> Application error. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">2 days</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-danger">
+                                                        <i class="fa fa-bolt"></i>
+                                                    </span> Database overloaded 68%. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">3 days</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-danger">
+                                                        <i class="fa fa-bolt"></i>
+                                                    </span> A user IP blocked. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">4 days</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-warning">
+                                                        <i class="fa fa-bell-o"></i>
+                                                    </span> Storage Server #4 not responding dfdfdfd. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">5 days</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-info">
+                                                        <i class="fa fa-bullhorn"></i>
+                                                    </span> System Error. </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="time">9 days</span>
+                                                <span class="details">
+                                                    <span class="label label-sm label-icon label-danger">
+                                                        <i class="fa fa-bolt"></i>
+                                                    </span> Storage server failed. </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END NOTIFICATION DROPDOWN -->
+                        <li class="separator hide"> </li>
+                        <!-- BEGIN INBOX DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <i class="icon-envelope-open"></i>
+                                <span class="badge badge-danger"> 4 </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="external">
+                                    <h3>You have
+                                        <span class="bold">7 New</span> Messages</h3>
+                                    <a href="app_inbox.html">view all</a>
+                                </li>
+                                <li>
+                                    <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                        <li>
+                                            <a href="#">
+                                                <span class="photo">
+                                                    <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                <span class="subject">
+                                                    <span class="from"> Lisa Wong </span>
+                                                    <span class="time">Just Now </span>
+                                                </span>
+                                                <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="photo">
+                                                    <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                <span class="subject">
+                                                    <span class="from"> Richard Doe </span>
+                                                    <span class="time">16 mins </span>
+                                                </span>
+                                                <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh...
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="photo">
+                                                    <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                <span class="subject">
+                                                    <span class="from"> Bob Nilson </span>
+                                                    <span class="time">2 hrs </span>
+                                                </span>
+                                                <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="photo">
+                                                    <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                <span class="subject">
+                                                    <span class="from"> Lisa Wong </span>
+                                                    <span class="time">40 mins </span>
+                                                </span>
+                                                <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="photo">
+                                                    <img src="../assets/global/layout4/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                <span class="subject">
+                                                    <span class="from"> Richard Doe </span>
+                                                    <span class="time">46 mins </span>
+                                                </span>
+                                                <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh...
+                                                    </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END INBOX DROPDOWN -->
+                        <li class="separator hide"> </li>
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- 开始 系统设置 -->
+                        <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_sting">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <i class="icon-settings"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="javascript:;"> 流程设置 </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"> 日志设置</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"> 通知设置 </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"> 人事设置 </a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li>
+                                    <a href="javascript:;"> 系统设置 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 结束 系统设置 -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user dropdown-dark">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <span class="username username-hide-on-mobile"> 李振华 </span>
+                                <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                <img alt="" class="img-circle" src="../assets/layout/img/user-img.jpg" /> </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="user/index.html">
+                                        <i class="icon-user"></i> 个人信息 </a>
+                                </li>
+                                <li>
+                                    <a href="user/editPwd.html">
+                                        <i class="icon-lock"></i> 修改密码 </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <i class="icon-logout"></i> 注销 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <div class="page-sidebar navbar-collapse collapse">
+                <!-- BEGIN SIDEBAR MENU -->
+                <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                    <li class="nav-item start active open">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="title">控制台</span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item start active open">
+                                <a href="index.html" class="nav-link ">
+                                    <span class="title">桌面</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item start ">
+                                <a href="#" class="nav-link ">
+                                    <span class="title">数据统计</span>
+                                    <span class="badge badge-danger">5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item  start active open">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-diamond"></i>
+                            <span class="title">常用操作</span>
+                            <span class="arrow open"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                <a href="" class="nav-link ">
+                                    <span class="title">发起流程</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="" class="nav-link ">
+                                    <span class="title">流程审批</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="" class="nav-link ">
+                                    <span class="title">日志提交</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="" class="nav-link ">
+                                    <span class="title">计划提交</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="" class="nav-link ">
+                                    <span class="title">通知公告</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content">
+
+                <!-- BEGIN PAGE BREADCRUMB -->
+                <ul class="page-breadcrumb breadcrumb">
+                    <li>
+                        <a href="index.html">控制台</a>
+                        <i class="fa fa-circle"></i>
+                    </li>
+                    <li>
+                        <span class="active">桌面</span>
+                    </li>
+                </ul>
+                <!-- END PAGE BREADCRUMB -->
+
+                <!-- BEGIN PAGE HEAD-->
+                <div class="page-head">
+                    <!-- BEGIN PAGE TITLE -->
+                    <div class="page-title">
+                        <h1>数据汇总
+                        </h1>
+                    </div>
+                    <!-- END PAGE TITLE -->
+                    <!-- BEGIN PAGE TOOLBAR -->
+                    <div class="page-toolbar">
+                        <div id="dashboard-report-range" class="pull-right tooltips btn btn-fit-height green" data-placement="top" data-original-title="Change dashboard date range">
+                            <i class="icon-calendar"></i>&nbsp;
+                            <span class="thin uppercase hidden-xs"></span>&nbsp;
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <!-- END PAGE TOOLBAR -->
+                </div>
+                <!-- END PAGE HEAD-->
+                <!-- BEGIN PAGE BASE CONTENT -->
+                <!-- BEGIN DASHBOARD STATS 1-->
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat blue">
+                            <div class="visual">
+                                <i class="fa fa-comments"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                    <span data-counter="counterup" data-value="1349">0</span>
+                                </div>
+                                <div class="desc"> New Feedbacks </div>
+                            </div>
+                            <a class="more" href="javascript:;"> View more
+                                <i class="m-icon-swapright m-icon-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat red">
+                            <div class="visual">
+                                <i class="fa fa-bar-chart-o"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                    <span data-counter="counterup" data-value="12,5">0</span>M$ </div>
+                                <div class="desc"> Total Profit </div>
+                            </div>
+                            <a class="more" href="javascript:;"> View more
+                                <i class="m-icon-swapright m-icon-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat green">
+                            <div class="visual">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                    <span data-counter="counterup" data-value="549">0</span>
+                                </div>
+                                <div class="desc"> New Orders </div>
+                            </div>
+                            <a class="more" href="javascript:;"> View more
+                                <i class="m-icon-swapright m-icon-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat purple">
+                            <div class="visual">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number"> +
+                                    <span data-counter="counterup" data-value="89"></span>% </div>
+                                <div class="desc"> Brand Popularity </div>
+                            </div>
+                            <a class="more" href="javascript:;"> View more
+                                <i class="m-icon-swapright m-icon-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- END DASHBOARD STATS 1-->
+                <!-- 开始 第二栏目 -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <span class="caption-subject font-blue bold uppercase">流程中心</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="btn-group">
+                                        <a class="btn blue btn-circle btn-sm" href="" style="margin-right: 5px"> 刷新
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                        <a class="btn blue btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                        筛选
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li>
+                                                <a href="javascript:;"> 代办
+                                                    <span class="badge badge-danger"> 4 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;"> 委托
+                                                    <span class="badge badge-danger"> 9 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;"> 抄送
+                                                    <span class="badge badge-danger"> 2 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;"> 超时
+                                                    <span class="badge badge-danger"> 0 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;"> 已办
+                                                    <span class="badge badge-success"> 12 </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="scroller" style="height: 312px;">
+                                    <div class="table-scrollable table-scrollable-borderless">
+                                        <table class="table table-hover table-light">
+                                            <thead>
+                                                <tr class="uppercase">
+                                                    <th> 流程 </th>
+                                                    <th> 发起人 </th>
+                                                    <th> 时间 </th>
+                                                    <th> 状态 </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">费用报销流程-杨文元-20170426</a>
+                                                    </td>
+                                                    <td> 杨文元 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-info"> 代办 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">费用报销流程-杨文元-20170426</a>
+                                                    </td>
+                                                    <td> 杨文元 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-success"> 代办 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">费用报销流程-杨文元-20170426</a>
+                                                    </td>
+                                                    <td> 杨文元 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-warning"> 委托 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">费用报销流程-杨文元-20170426</a>
+                                                    </td>
+                                                    <td> 杨文元 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-danger"> 超时 </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="scroller-footer clearfix">
+                                    <div class="btn-arrow-link pull-right">
+                                        <a href="javascript:;">查看全部</a>
+                                        <i class="icon-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="portlet light tasks-widget bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <span class="caption-subject font-blue bold uppercase">公告通知</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="btn-group">
+                                        <a class="btn blue btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                        筛选
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li>
+                                                <a href="javascript:;"> 通知
+                                                    <span class="badge badge-danger"> 4 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;"> 公告
+                                                    <span class="badge badge-danger"> 9 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;"> 通报
+                                                    <span class="badge badge-danger"> 2 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;"> 其他
+                                                    <span class="badge badge-danger"> 0 </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="scroller" style="height: 312px;">
+                                    <div class="table-scrollable table-scrollable-borderless">
+                                        <table class="table table-hover table-light">
+                                            <thead>
+                                                <tr class="uppercase">
+                                                    <th> 通知 </th>
+                                                    <th> 统计 </th>
+                                                    <th> 时间 </th>
+                                                    <th> 状态 </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">关于五一放假及节后作息时间调整的通</a>
+                                                    </td>
+                                                    <td> 50人阅读 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-info"> 未读 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">关于五一放假及节后作息时间调整的通</a>
+                                                    </td>
+                                                    <td> 50人阅读 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-info"> 未读 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">关于五一放假及节后作息时间调整的通</a>
+                                                    </td>
+                                                    <td> 50人阅读 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-info"> 未读 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">关于五一放假及节后作息时间调整的通</a>
+                                                    </td>
+                                                    <td> 50人阅读 </td>
+                                                    <td> 20170426 </td>
+                                                    <td>
+                                                        <span class="label label-sm label-success"> 已读 </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="scroller-footer clearfix">
+                                    <div class="btn-arrow-link pull-right">
+                                        <a href="javascript:;">查看全部</a>
+                                        <i class="icon-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- 结束 第二栏目 -->
+                <!-- 开始 第三栏目 -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <span class="caption-subject font-blue bold uppercase">工作日志</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="btn-group">
+                                        <a class="btn blue btn-circle btn-sm" href="" style="margin-right: 5px"> 刷新
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="scroller" style="height: 312px;">
+                                    <div class="table-scrollable table-scrollable-borderless">
+                                        <table class="table table-hover table-light">
+                                            <thead>
+                                                <tr class="uppercase">
+                                                    <th> 日志 </th>
+                                                    <th> 等级 </th>
+                                                    <th> 时间 </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 工作日志</a>
+                                                    </td>
+                                                    <td> B </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 工作日志</a>
+                                                    </td>
+                                                    <td> B </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 工作日志</a>
+                                                    </td>
+                                                    <td> B </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 工作日志</a>
+                                                    </td>
+                                                    <td> B </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 工作日志</a>
+                                                    </td>
+                                                    <td> B </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="scroller-footer clearfix">
+                                    <div class="btn-arrow-link pull-right">
+                                        <a href="javascript:;">查看全部</a>
+                                        <i class="icon-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <span class="caption-subject font-blue bold uppercase">工作计划</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="btn-group">
+                                        <a class="btn blue btn-circle btn-sm" href="" style="margin-right: 5px"> 刷新
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="scroller" style="height: 312px;">
+                                    <div class="table-scrollable table-scrollable-borderless">
+                                        <table class="table table-hover table-light">
+                                            <thead>
+                                                <tr class="uppercase">
+                                                    <th> 计划 </th>
+                                                    <th> 类型 </th>
+                                                    <th> 时间 </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 2017-04</a>
+                                                    </td>
+                                                    <td> 月计划 </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 2017-04</a>
+                                                    </td>
+                                                    <td> 周计划 </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 2017-04</a>
+                                                    </td>
+                                                    <td> 月计划 </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 2017-04</a>
+                                                    </td>
+                                                    <td> 周计划 </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="">王楠 采购部 主管 2017-04</a>
+                                                    </td>
+                                                    <td> 周计划 </td>
+                                                    <td> 20170426 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="scroller-footer clearfix">
+                                    <div class="btn-arrow-link pull-right">
+                                        <a href="javascript:;">查看全部</a>
+                                        <i class="icon-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- 结束 第三栏目 -->
+                <!-- END PAGE BASE CONTENT -->
+            </div>
+            <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <a href="javascript:;" class="page-quick-sidebar-toggler">
+            <i class="icon-login"></i>
+        </a>
+
+        <!-- END QUICK SIDEBAR -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner"> 2014 &copy; 版权所属：
+            <a href="http://www.tgc360.com" title="" target="_blank">中山市众创云信息科技有限公司.</a>
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <!--[if lt IE 9]>
+        <script src="../assets/global/plugins/respond.min.js"></script>
+        <script src="../assets/global/plugins/excanvas.min.js"></script>
+        <![endif]-->
+    <script src="../assets/global/jquery/jquery.min.js"></script>
+    <script src="../assets/global/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/global/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="../assets/global/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../assets/global/layout4/scripts/layout.js"></script>
+</body>
+
+</html>
