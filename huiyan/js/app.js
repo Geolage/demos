@@ -14,7 +14,13 @@ $(function(){
         "pagedim-black"
     ],
     navbar:{
-      title: "慧眼人才"
+      _title: "慧眼人才",
+      get title() {
+        return this._title;
+      },
+      set title(value) {
+        this._title = value;
+      },
     }
   });
   var API = $(".m-menu").data( "mmenu" );
