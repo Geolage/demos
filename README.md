@@ -6,4 +6,4 @@ These demos contain 8 projects, most of them are corp websites, which now are be
 
 **More information**
 
-I'm sorry, the doc's on the run, but will be updated as soon as possible.
+I'm sorry, the docs on the run, but will be updated as soon as possible.
